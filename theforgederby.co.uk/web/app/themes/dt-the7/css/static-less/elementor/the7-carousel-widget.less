@@ -1,0 +1,18 @@
+@import "parts/flex-mixins";
+@import "the7-masonry/text-decorations";
+
+.elementor-widget.elementor-widget-the7_elements_carousel {
+  @import "the7-masonry/post-layouts";
+  @import "the7-masonry/defaults";
+  @import "the7-masonry/hovers";
+  @import "the7-masonry/read-more-button";
+}
+.shadow-position-v (@position-v) when (@position-v < 0) {
+    padding-top: calc(-1*@position-v + var(--shadow-blur) + var(--shadow-spread));
+    padding-bottom: 0;
+}
+.elementor-widget.elementor-widget-the7_elements_carousel .dt-owl-item {
+  padding-bottom: calc(var(--shadow-vertical) + var(--shadow-blur) + var(--shadow-spread));
+  .shadow-position-v(var(--shadow-vertical));
+  //padding: calc(var(--shadow-vertical) + var(--shadow-blur) + var(--shadow-spread)) calc(var(--shadow-horizontal) + var(--shadow-blur) + var(--shadow-spread));
+}

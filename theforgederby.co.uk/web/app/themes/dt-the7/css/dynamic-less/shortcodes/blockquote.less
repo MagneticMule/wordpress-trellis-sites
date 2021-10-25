@@ -1,0 +1,44 @@
+/* #blockquote
+================================================== */
+
+blockquote:not(.shortcode-blockquote):not(.elementor-blockquote),
+blockquote.shortcode-blockquote.block-style-widget,
+.block-style-widget {
+	.solid-bg-mixin;
+}
+blockquote:not(.shortcode-blockquote):not(.elementor-blockquote),
+.block-style-widget {
+	.outline-decoration;
+	.shadow-decoration;
+}
+
+.shortcode-pullquote:after,
+.shortcode-action-bg:before {
+	.accent-bg-mixin;
+}
+blockquote.shortcode-blockquote {
+	.transparent-border-mixin;
+}
+blockquote:not(.elementor-blockquote),
+blockquote:not(.elementor-blockquote) *,
+.shortcode-pullquote,
+.wp-block-quote cite {
+	.header-color;
+}
+blockquote:not(.wp-block-quote):not(.elementor-blockquote) {
+	color: @h5-color;
+	font: @h5-font-style @h5-font-variant @h5-font-weight @h5-font-size-desktop~"/"@h5-line-height-desktop @h5-font-family;
+	text-transform: @h5-text-transform;
+	@media (max-width: @lg-breakpoint - 1) {
+		font-size: @h5-font-size-tablet;
+		line-height: @h5-line-height-tablet;
+	}
+	@media (max-width: @md-breakpoint - 1) {
+		font-size: @h5-font-size-mobile;
+		line-height: @h5-line-height-mobile;
+	}
+}
+/*Call to action*/
+.plain-bg {
+	.transparent-border-mixin;
+}

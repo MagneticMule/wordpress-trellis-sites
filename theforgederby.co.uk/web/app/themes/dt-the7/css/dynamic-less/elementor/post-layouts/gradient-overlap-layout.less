@@ -1,0 +1,20 @@
+.post-entry-content {
+  #page .@{unique-shortcode-class-name}.content-bg-on.gradient-overlap-layout-list & {
+    background: linear-gradient(to bottom, var(--content-bg-color), var(--content-bg-color)) no-repeat 0px 125px;
+    overflow: hidden;
+
+    &:before {
+      box-shadow: 0 0 40px 80px var(--content-bg-color);
+      top: 125px;
+      background: none;
+    }
+  }
+
+  #page .@{unique-shortcode-class-name}.content-bg-on.gradient-overlap-layout-list .no-img & {
+    background: var(--content-bg-color);
+
+    &:before {
+      display: none;
+    }
+  }
+}

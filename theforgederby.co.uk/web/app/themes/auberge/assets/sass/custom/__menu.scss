@@ -1,0 +1,91 @@
+/* FILE: custom/__menu.scss */
+
+//
+// Navigational menus colors
+//
+
+
+
+
+
+.main-navigation {
+	border-color: map_get( $customize_options, 'color-navigation-border' ); // Plus
+	border-color: var(--color-navigation-border); // Plus
+
+	li ul {
+		background-color: map_get( $customize_options, 'color-navigation' ); // Plus
+		color: map_get( $customize_options, 'color-navigation-text' ); // Plus
+		background-color: var(--color-navigation); // Plus
+		color: var(--color-navigation-text); // Plus
+	}
+
+	.nav-menu li li {
+
+		&:hover > a,
+		& > a:hover,
+		&.active-menu-item > a {
+			background-color: map_get( $customize_options, 'color-navigation-border' ); // Plus
+			background-color: var(--color-navigation-border); // Plus
+		}
+
+	}
+
+}
+
+
+
+@include responsive( map_get( $breakpoint, 'l' ), 'max-width' ) {
+
+	.main-navigation {
+
+		&-inner {
+			background-color: map_get( $customize_options, 'color-navigation' ); // Plus
+			background-color: var(--color-navigation); // Plus
+		}
+
+		ul a {
+			color: map_get( $customize_options, 'color-navigation-text' ); // Plus
+			color: var(--color-navigation-text); // Plus
+		}
+
+		.nav-menu {
+
+			a:hover,
+			li:hover > a,
+			li li:hover > a,
+			li.active-menu-item > a,
+			li li.active-menu-item > a {
+				background: transparent; //*
+				color: map_get( $customize_options, 'color-navigation-text' ); // Plus
+				color: var(--color-navigation-text); // Plus
+			}
+
+			li.current-menu-item > a,
+			li li.current-menu-item > a {
+				background-color: map_get( $customize_options, 'color-navigation-border' ); // Plus
+				background-color: var(--color-navigation-border); // Plus
+			}
+
+		}
+
+	}
+
+
+
+	.menu-toggle {
+
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			background: transparent; //*
+		}
+
+		&::before {
+			background: map_get( $customize_options, 'color-accent' );
+			background: var(--color-accent);
+		}
+
+	}
+
+}

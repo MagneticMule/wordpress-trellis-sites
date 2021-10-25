@@ -1,0 +1,24 @@
+:root {
+  --the7-btn-s-font-variant: @dt-btn-s-font-variant;
+  --the7-woo-title-font-style: @woo-title-font-style;
+  --the7-woo-title-font-variant: @woo-title-font-variant;
+  --the7-woo-title-font-size: @woo-title-font-size-desktop;
+  --the7-woo-title-line-height: @woo-title-line-height-desktop;
+  --the7-woo-content-font-style: @woo-content-font-style;
+  --the7-woo-content-font-variant: @woo-content-font-variant;
+  --the7-woo-content-font-size: @woo-content-font-size-desktop;
+  --the7-woo-content-line-height: @woo-content-line-height-desktop;
+
+  @media screen and (max-width: @elementor-lg-breakpoint - 1) {
+    --the7-woo-content-font-size: @woo-content-font-size-tablet;
+    --the7-woo-content-line-height: @woo-content-line-height-tablet;
+    --the7-woo-title-font-size: @woo-title-font-size-tablet;
+    --the7-woo-title-line-height: @woo-title-line-height-tablet;
+  }
+  @media screen and (max-width: @elementor-md-breakpoint - 1) {
+    --the7-woo-content-font-size: @woo-content-font-size-mobile;
+    --the7-woo-content-line-height: @woo-content-line-height-mobile;
+    --the7-woo-title-font-size: @woo-title-font-size-mobile;
+    --the7-woo-title-line-height: @woo-title-line-height-mobile;
+  }
+}

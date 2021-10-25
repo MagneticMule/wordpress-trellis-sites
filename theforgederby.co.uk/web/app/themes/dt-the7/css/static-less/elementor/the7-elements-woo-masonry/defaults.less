@@ -1,0 +1,94 @@
+@pagination-item-padding: 5px 10px;
+@pagination-item-marign: 0 5px;
+@pagination-load-more-icon-spacing: 5px;
+
+.filter {
+  --filter-title-color-normal: var(--the7-title-color);
+  --filter-title-color-hover: var(--the7-title-color);
+  --filter-title-color-active: var(--the7-title-color);
+  --filter-pointer-border-width: var(--the7-filter-pointer-border-width);
+  --filter-pointer-bg-radius: var(--the7-filter-pointer-bg-radius);
+  --filter-pointer-bg-color-active: var(--the7-accent-color);
+  --filter-pointer-bg-color-hover: var(--the7-accent-color);
+  line-height: 1;
+
+  &.filter-without-decoration {
+    --filter-title-color-hover: var(--the7-accent-color);
+    --filter-title-color-active: var(--the7-accent-color);
+  }
+
+  &.filter-bg-decoration {
+    --filter-title-color-hover: var(--the7-accent-color);
+    --filter-title-color-active: #fff;
+
+    .filter-categories a.act {
+      background: var(--filter-pointer-bg-color-active);
+    }
+  }
+
+  &.filter-underline-decoration {
+    --filter-title-color-hover: var(--the7-title-color);
+    --filter-title-color-active: var(--the7-title-color);
+    --filter-pointer-bg-color-hover: var(--the7-accent-color);
+  }
+
+  .accent-gradient & {
+
+    &.filter-bg-decoration .filter-categories {
+      a:not(.act):hover {
+        --filter-title-color-hover: transparent;
+        background: var(--filter-pointer-bg-color-hover);
+        -webkit-background-clip: text;
+      }
+    }
+
+    &.filter-without-decoration .filter-categories {
+      a:hover {
+        background: var(--filter-pointer-bg-color-hover);
+        -webkit-background-clip: text;
+      }
+
+      a.act {
+        background: var(--filter-pointer-bg-color-active);
+        -webkit-background-clip: text;
+      }
+    }
+  }
+}
+
+.paginator {
+  --filter-title-color-normal: var(--the7-title-color);
+  --filter-title-color-hover: var(--the7-title-color);
+  --filter-title-color-active: var(--the7-title-color);
+  --filter-pointer-border-width: 2px;
+  --filter-pointer-bg-radius: var(--the7-general-border-radius);
+  --filter-pointer-bg-color-active: var(--the7-accent-color);
+  --filter-pointer-bg-color-hover: var(--the7-accent-color);
+  line-height: var(--the7-text-big-line-height);
+  font-size: var(--the7-text-big-font-size);
+  font-weight: normal;
+  line-height: 1;
+
+  .button-load-more {
+    line-height: 1;
+
+    .button-caption {
+      font-weight: inherit;
+    }
+
+    i:first-child {
+      margin: 0 @pagination-load-more-icon-spacing 0 0;
+    }
+
+    i:last-child {
+      margin: 0 0 0 @pagination-load-more-icon-spacing;
+    }
+  }
+
+  a {
+    font-weight: normal;
+    margin: @pagination-item-marign;
+    padding: @pagination-item-padding;
+  }
+}
+

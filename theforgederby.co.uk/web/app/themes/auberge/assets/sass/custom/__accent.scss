@@ -1,0 +1,88 @@
+/* FILE: custom/__accent.scss */
+
+//
+// Accent colors
+//
+
+
+
+
+
+a,
+.accent-color {
+	color: map_get( $customize_options, 'color-accent' );
+	color: var(--color-accent);
+}
+
+
+
+mark,
+ins,
+.highlight,
+pre::before,
+.pagination a,
+.pagination span,
+.label-sticky,
+.button,
+button,
+form button,
+.fl-node-content button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.menu-group-nav a,
+.post-navigation .nav-previous,
+.post-navigation .nav-next,
+.bypostauthor > .comment-body .comment-author::before,
+.comment-navigation a,
+.widget_calendar tbody a,
+.widget .tagcloud a:hover,
+body #infinite-handle span,
+.rtb-message,
+.site-content div.sharedaddy .sd-content ul li a.sd-button:not(.no-text) {
+	background-color: map_get( $customize_options, 'color-accent' );
+	color: map_get( $customize_options, 'color-accent-text' );
+	background-color: var(--color-accent);
+	color: var(--color-accent-text);
+}
+
+	mark,
+	ins,
+	.highlight {
+		box-shadow:  .38em 0 0 map_get( $customize_options, 'color-accent' ),
+		            -.38em 0 0 map_get( $customize_options, 'color-accent' );
+		box-shadow:  .38em 0 0 var(--color-accent),
+		            -.38em 0 0 var(--color-accent);
+	}
+
+
+
+.post-navigation {
+
+	.nav-previous::before {
+		background: map_get( $customize_options, 'color-accent' );
+		background: linear-gradient( to left, transparent 19%, map_get( $customize_options, 'color-accent' ) 81% );
+		background: var(--color-accent);
+		background: linear-gradient( to left, transparent 19%, var(--color-accent) 81% );
+
+		[dir="rtl"] & {
+			background: linear-gradient( to right, transparent 19%, map_get( $customize_options, 'color-accent' ) 81% );
+			background: linear-gradient( to right, transparent 19%, var(--color-accent) 81% );
+		}
+
+	}
+
+	.nav-next::before {
+		background: map_get( $customize_options, 'color-accent' );
+		background: linear-gradient( to right, transparent 19%, map_get( $customize_options, 'color-accent' ) 81% );
+		background: var(--color-accent);
+		background: linear-gradient( to right, transparent 19%, var(--color-accent) 81% );
+
+		[dir="rtl"] & {
+			background: linear-gradient( to left, transparent 19%, map_get( $customize_options, 'color-accent' ) 81% );
+			background: linear-gradient( to left, transparent 19%, var(--color-accent) 81% );
+		}
+
+	}
+
+}

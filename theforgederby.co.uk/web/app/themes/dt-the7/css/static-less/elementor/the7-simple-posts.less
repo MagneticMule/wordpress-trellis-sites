@@ -1,0 +1,240 @@
+@import "parts/filter-decorations-base";
+@import "parts/decorations/pagination";
+.the7-simple-posts.widget-divider-on .wf-cell:before {
+  content: "";
+  position: absolute;
+  top: calc(-1 * (var(--grid-row-gap, 0px) + var(--divider-width, 0px)) / 2);
+  left: 0;
+  width: 100%;
+  border-bottom-width: var(--divider-width, 0px);
+  border-bottom-color: var(--the7-divider-color);
+}
+.the7-simple-posts .dt-css-grid .wf-cell {
+  position: relative;
+  min-width: 0;
+  transition: all 300ms ease;
+  display: flex;
+}
+.the7-simple-posts .dt-css-grid {
+  grid-template-rows: auto;
+}
+.auto-height-y .the7-simple-posts .dt-css-grid {
+  align-items: flex-start;
+}
+
+.the7-simple-posts .rp-heading {
+  margin-bottom: 20px;
+}
+.the7-simple-posts .wrapper.post {
+  display: flex;
+  flex-flow: row nowrap;
+  width:100%;
+  transition: all 300ms ease;
+}
+.auto-height-y .the7-simple-posts .wrapper.post {
+  height: 100%;
+}
+
+.elementor-widget-the7-elements-simple-posts {
+  --image-spacing: 15px;
+  --image-size: 80px;
+}
+
+.the7-simple-posts .post-thumbnail-wrap {
+  display: flex;
+  flex-shrink: 0;
+  margin: 0 var(--image-spacing) 0 0;
+}
+.img-align-right .the7-simple-posts .post-thumbnail-wrap {
+  margin: 0 0 0 var(--image-spacing);
+  order: 2;
+}
+.img-align-top .the7-simple-posts .post-thumbnail-wrap {
+  flex-direction: column;
+  margin: 0 0 var(--image-spacing) 0;
+}
+.the7-simple-posts .post-thumbnail-wrap img {
+  max-width: 100%;
+  height: auto;
+  transition: all 300ms ease;
+  border-color: var(--the7-divider-color);
+  border-width: 1px;
+}
+.the7-simple-posts .post-thumbnail {
+  width: 100%;
+}
+.the7-simple-posts .post-entry-content {
+  display: flex;
+  flex-flow: column wrap;
+  max-width: 100%;
+  width: 100%;
+}
+.img-align-right .post-entry-content,
+.img-align-left .post-entry-content {
+  width: calc(100% ~'-' var(--image-size) ~'-' var(--image-spacing));
+}
+
+.the7-simple-posts .post-title {
+  color: var(--the7-h5-color);
+  display: inline-block;
+  text-decoration: none;
+  transition: all 300ms ease;
+  margin-bottom: 0 !important;
+}
+.the7-simple-posts .wf-cell .post-title:hover,
+.the7-simple-posts a.wf-cell:hover .post-title {
+  color: var(--the7-h5-color);
+}
+.the7-simple-posts .short-description {
+  font-size: var(--the7-base-font-size);
+  line-height: var(--the7-base-line-height);
+  margin-bottom: 0;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+.the7-simple-posts .post-details.details-type-btn {
+  width: fit-content;
+  margin-top: 15px;
+}
+
+
+.the7-simple-posts .heading {
+  max-width: 100%;
+  margin-bottom: 0;
+}
+.the7-simple-posts.title-to-line .post-title {
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.the7-simple-posts.desc-to-line .short-description {
+  white-space: nowrap;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.the7-simple-posts .post-entry-content ul li {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  justify-content: flex-start;
+}
+.the7-simple-posts .post-entry-content ul {
+  margin-left: 0;
+  margin-right: 0;
+}
+.elementor-widget .the7-simple-posts .img-ratio-wrapper {
+  display: block;
+  line-height: 0;
+}
+.elementor-widget-the7-elements-simple-posts:not(.preserve-img-ratio-y) .img-ratio-wrapper {
+  padding-bottom: 100%;
+}
+.elementor-widget-the7-elements-simple-posts:not(.preserve-img-ratio-y) .img-ratio-wrapper img {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+.elementor-widget .the7-simple-posts .img-ratio-wrapper.compat-object-fit img {
+  display: none;
+}
+.elementor-widget .the7-simple-posts .img-ratio-wrapper.compat-object-fit {
+  background-size: cover;
+  background-position: center center;
+}
+.elementor-widget.preserve-img-ratio-y .the7-simple-posts .img-ratio-wrapper.compat-object-fit {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.paginator a.button-load-more {
+  width: auto;
+  height: auto;
+}
+.paginator a.button-load-more i {
+  line-height: inherit;
+  font-size: inherit;
+}
+.paginator .disabled {
+  display: none;
+}
+.elementor-widget.elementor-widget-the7-elements-simple-posts .paginator {
+  --filter-title-color-normal: var(--the7-title-color);
+  --filter-title-color-hover: var(--the7-title-color);
+  --filter-title-color-active: var(--the7-title-color);
+  --filter-pointer-border-width: 2px;
+  --filter-pointer-bg-radius: var(--the7-general-border-radius);
+  --filter-pointer-bg-color-active: var(--the7-accent-color);
+  --filter-pointer-bg-color-hover: var(--the7-accent-color);
+  line-height: var(--the7-text-big-line-height);
+  font-size: var(--the7-text-big-font-size);
+  font-weight: normal;
+  line-height: 1;
+}
+.elementor-widget.elementor-widget-the7-elements-simple-posts .paginator .button-load-more {
+  line-height: 1;
+}
+.elementor-widget.elementor-widget-the7-elements-simple-posts .paginator .button-load-more .button-caption {
+  font-weight: inherit;
+}
+.elementor-widget.elementor-widget-the7-elements-simple-posts .paginator .button-load-more i:first-child {
+  margin: 0 5px 0 0;
+}
+.elementor-widget.elementor-widget-the7-elements-simple-posts .paginator .button-load-more i:last-child {
+  margin: 0 0 0 5px;
+}
+.elementor-widget.elementor-widget-the7-elements-simple-posts .paginator a {
+  font-weight: normal;
+  margin: 0 5px;
+  padding: 5px 10px;
+}
+.the7-simple-posts .entry-meta {
+  margin-top: 5px;
+}
+.the7-simple-posts .entry-meta {
+  font-size: var(--the7-text-small);
+  line-height: var(--the7-text-small-line-height);
+}
+.the7-simple-posts .entry-meta a,
+.the7-simple-posts .entry-meta span {
+  transition: all 0.3s ease;
+}
+
+.the7-simple-posts .entry-meta .meta-item:not(:last-child) {
+  margin: 0 5px 0 0;
+  padding: 0;
+}
+.the7-simple-posts .entry-meta .meta-item:not(:first-child):before {
+  position: relative;
+  box-shadow: none;
+  margin: 0 5px 0 0;
+  height: auto;
+  width: auto;
+  content: '';
+}
+.the7-simple-posts .entry-meta a.meta-item:not(:first-child):before {
+  transition: inherit;
+}
+.the7-simple-posts .entry-meta .meta-item:after {
+  right: inherit;
+  width: inherit;
+  height: inherit;
+  top: inherit;
+  transform: inherit;
+  content: "";
+  background: none;
+}
+.icon-box-vertical-align-center .the7-simple-posts .post-entry-content {
+  justify-content: center;
+}
+
+.icon-box-vertical-align-bottom .the7-simple-posts .post-entry-content {
+  justify-content: flex-end;
+}
+
+.the7-simple-posts .box-button {
+  margin-top: 15px;
+}

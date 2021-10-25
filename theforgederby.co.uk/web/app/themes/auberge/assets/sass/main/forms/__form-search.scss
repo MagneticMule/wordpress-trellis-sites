@@ -1,0 +1,144 @@
+/* FILE: main/forms/__form-search.scss */
+
+//
+// Search form
+//
+
+
+
+
+
+.nav-search-form {
+	@extend %font_size_smaller;
+	position: absolute;
+	width: 92%;
+	height: 2.62em;
+	#{$left}: 4%; // {{RTL}}
+	top: 1em;
+	padding: 0;
+	vertical-align: top;
+
+	@include responsive( map_get( $breakpoint, 'l' ) ) {
+		float: $right; // {{RTL}}
+		position: static;
+		width: auto;
+		height: auto;
+		#{$left}: auto; // {{RTL}}
+		top: auto;
+	}
+
+
+	form[role="search"],
+	.form-search,
+	.search-form {
+		width: 100%;
+		max-width: 100%;
+		padding: 1em;
+		line-height: 1;
+		overflow: hidden;
+		box-shadow: 0 5px 20px 0 rgba( #000, .2 );
+		transition: all .2s ease-in-out;
+
+		@include responsive( map_get( $breakpoint, 'l' ) ) {
+			position: absolute;
+			#{$right}: 0; // {{RTL}}
+			top: -100%;
+			font-size: 1.62em;
+			opacity: 0;
+			z-index: -1;
+		}
+
+		&::after {
+			@extend %genericon;
+			content: '\f400';
+			position: absolute;
+			#{$right}: 2em; // {{RTL}}
+			top: 50%;
+			transform: translateY(-50%);
+			vertical-align: top;
+		}
+
+	}
+
+
+
+	.search-field {
+
+		&,
+		&:focus {
+			padding: 1em;
+			padding-#{$right}: 2.5em;
+			vertical-align: top;
+		}
+
+	}
+
+
+
+	[type="submit"] {
+		position: absolute;
+		width: 3em;
+		height: 100%;
+		#{$right}: 1em; // {{RTL}}
+		top: 0;
+		opacity: 0;
+		overflow: hidden;
+		z-index: 10;
+
+		&:hover,
+		&:focus,
+		&:active {
+			opacity: 0;
+		}
+
+	}
+
+}
+
+
+
+.nav-search-form.active,
+.no-js .nav-search-form:hover {
+
+	form[role="search"],
+	.form-search,
+	.search-form {
+
+		@include responsive( map_get( $breakpoint, 'l' ) ) {
+			top: 100%;
+			opacity: 1;
+		}
+
+	}
+
+}
+
+
+
+.search-toggle {
+	display: none;
+
+	@include responsive( map_get( $breakpoint, 'l' ) ) {
+		display: inline-block;
+		position: relative;
+		font-size: 1.62rem;
+		color: inherit;
+		vertical-align: top;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&::before {
+		@extend %genericon;
+		content: '\f400';
+		vertical-align: top;
+
+		.nav-search-form.active & {
+			content: '\f406';
+		}
+
+	}
+
+}

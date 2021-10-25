@@ -1,0 +1,28 @@
+/* FILE: custom/__borders.scss */
+
+//
+// Borders color
+//
+
+
+
+
+
+.site {
+	border-color: map_get( $customize_options, 'color-content-border' ); // Plus
+	border-color: var(--color-content-border); // Plus
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus,
+.label-sticky::before,
+.label-sticky::after,
+.posts .entry:hover,
+.widget .tagcloud a:hover,
+.site .picker__input.picker__input--active {
+	border-color: map_get( $customize_options, 'color-accent' );
+	border-color: var(--color-accent);
+}

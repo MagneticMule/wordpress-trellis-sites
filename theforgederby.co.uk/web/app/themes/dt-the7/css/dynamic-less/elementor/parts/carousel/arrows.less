@@ -1,0 +1,76 @@
+.nav-position-mixin(@position-v, @position-h, @offset-v, @offset-h) when (@position-v = top)and (@position-h = left)  {
+  top: @offset-v;
+  left: @offset-h;
+  transform: translateX(0);
+}
+
+.nav-position-mixin(@position-v, @position-h, @offset-v, @offset-h) when (@position-v = top)and (@position-h = center)  {
+  top: @offset-v;
+  left: 50%;
+  transform: translateX(calc(-50%~'+'@offset-h));
+  @media all and (-ms-high-contrast: none) {
+    transform: translateX(-50%);
+    margin-left: @offset-h;
+  }
+}
+
+.nav-position-mixin(@position-v, @position-h, @offset-v, @offset-h) when (@position-v = top)and (@position-h = right)  {
+  top: @offset-v;
+  right: @offset-h;
+  left: auto;
+  transform: translateX(0);
+}
+
+.nav-position-mixin(@position-v, @position-h, @offset-v, @offset-h) when (@position-v = center)and (@position-h = left)  {
+  top: 50%;
+  left: @offset-h;
+  transform: translate3d(0, calc(-50%~'+'@offset-v), 0);
+}
+
+.nav-position-mixin(@position-v, @position-h, @offset-v, @offset-h) when (@position-v = center)and (@position-h = center)  {
+  top: 50%;
+  left: 50%;
+  transform: translate3d(calc(-50%~'+'@offset-h), calc(-50%~'+'@offset-v), 0);
+}
+
+.nav-position-mixin(@position-v, @position-h, @offset-v, @offset-h) when (@position-v = center)and (@position-h = right)  {
+  top: 50%;
+  right: @offset-h;
+  transform: translate3d(0, calc(-50%~'+'@offset-v), 0);
+  left: auto;
+}
+
+.nav-position-mixin(@position-v, @position-h, @offset-v, @offset-h) when (@position-v = bottom)and (@position-h = left)  {
+  top: calc(100% ~'+' @offset-v);
+  left: @offset-h;
+  transform: translateX(0);
+}
+
+.nav-position-mixin(@position-v, @position-h, @offset-v, @offset-h) when (@position-v = bottom)and (@position-h = center)  {
+  top: calc(100% ~'+' @offset-v);
+  left: 50%;
+  transform: translateX(calc(-50%~'+'@offset-h));
+  @media all and (-ms-high-contrast: none) {
+    transform: translateX(-50%);
+    margin-left: @offset-h;
+  }
+}
+
+.nav-position-mixin(@position-v, @position-h, @offset-v, @offset-h) when (@position-v = bottom)and (@position-h = right)  {
+  top: calc(100% ~'+' @offset-v);
+  right: @offset-h;
+  left: auto;
+  transform: translateX(0);
+}
+
+.owl-carousel-nav-left-position(@pv, @ph, @ov, @oh) {
+  .owl-nav a.owl-prev {
+    .nav-position-mixin(@pv, @ph, @ov, @oh);
+  }
+}
+
+.owl-carousel-nav-right-position(@pv, @ph, @ov, @oh) {
+  .owl-nav a.owl-next {
+    .nav-position-mixin(@pv, @ph, @ov, @oh);
+  }
+}

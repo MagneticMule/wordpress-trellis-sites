@@ -1,0 +1,41 @@
+.elementor-widget-the7-woocommerce-product-additional-information table.woocommerce-product-attributes {
+  border-collapse: separate;
+}
+.elementor-widget-the7-woocommerce-product-additional-information .shop_attributes {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+}
+.elementor-widget-the7-woocommerce-product-additional-information .shop_attributes th {
+  font-weight: normal;
+  border: none;
+}
+.elementor-widget-the7-woocommerce-product-additional-information .shop_attributes td {
+  border: none;
+}
+.elementor-widget-the7-woocommerce-product-additional-information .shop_attributes tr:not(:first-child) td,
+.elementor-widget-the7-woocommerce-product-additional-information .shop_attributes tr:not(:first-child) th {
+  border-color: var(--the7-divider-color);
+}
+.elementor-widget-the7-woocommerce-product-additional-information:not(wc-product-info-yes) tr:not(:first-child) th {
+  border: none;
+}
+.elementor-widget-the7-woocommerce-product-additional-information:not(wc-product-info-yes) tr:not(:first-child) td {
+  border: none;
+}
+.elementor-widget-the7-woocommerce-product-additional-information:not(wc-product-info-top-border-yes) tr:first-child th {
+  border: none;
+}
+.elementor-widget-the7-woocommerce-product-additional-information:not(wc-product-info-top-border-yes) tr:first-child td {
+  border: none;
+}
+.elementor-widget-the7-woocommerce-product-additional-information .woocommerce-product-attributes .woocommerce-product-attributes-item__label {
+  font-weight: var(--the7-base-font-weight);
+  color: var(--the7-title-color);
+}
+.elementor-widget-the7-woocommerce-product-additional-information.wc-product-info-top-border-yes .shop_attributes tr:first-child th,
+.elementor-widget-the7-woocommerce-product-additional-information.wc-product-info-top-border-yes .shop_attributes tr:last-child th,
+.elementor-widget-the7-woocommerce-product-additional-information.wc-product-info-top-border-yes .shop_attributes tr:first-child td,
+.elementor-widget-the7-woocommerce-product-additional-information.wc-product-info-top-border-yes .shop_attributes tr:last-child td {
+  border-color: var(--the7-divider-color);
+}

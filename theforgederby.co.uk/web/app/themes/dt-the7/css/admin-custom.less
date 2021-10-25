@@ -1,0 +1,131 @@
+.editor-styles-wrapper,
+.editor-styles-wrapper .editor-writing-flow,
+.editor-styles-wrapper p,
+.editor-styles-wrapper .wp-block p {
+	font: @base-font-style @base-font-variant @base-font-weight @text-big~"/"@text-big-line-height @base-font-family;
+	word-spacing: normal;
+}
+
+.editor-styles-wrapper .wp-block-cover .wp-block-cover-text,
+.editor-styles-wrapper .wp-block-cover h2 {
+	font: @h3-font-style @h3-font-variant @h3-font-weight @h3-font-size-desktop~"/"@h3-line-height-desktop @h3-font-family !important;
+	text-transform: @h3-text-transform;
+	@media (max-width: @lg-breakpoint - 1) {
+		font-size: @h3-font-size-tablet;
+		line-height: @h3-line-height-tablet;
+	}
+	@media (max-width: @md-breakpoint - 1) {
+		font-size: @h3-font-size-mobile;
+		line-height: @h3-line-height-mobile;
+	}
+}
+/*Large text*/
+.text-big,
+.dt-accordion-text-big .wpb_accordion_header > a {
+	font-size: @text-big;
+	line-height: @text-big-line-height;
+}
+/*Medium text*/
+.text-normal,
+.dt-accordion-text-normal .wpb_accordion_header > a {
+	font-size: @base-font-size;
+	line-height: @base-line-height;
+}
+/*Small text*/
+.text-small,
+.dt-accordion-text-small .wpb_accordion_header > a {
+	font-size: @text-small;
+	line-height: @text-small-line-height;
+}
+
+.wp-block-heading h1,
+.wp-block-freeform.block-library-rich-text__tinymce > h1 {
+	font: @h1-font-style @h1-font-variant @h1-font-weight @h1-font-size-desktop~"/"@h1-line-height-desktop @h1-font-family;
+	text-transform: @h1-text-transform;
+	@media (max-width: @lg-breakpoint - 1) {
+		font-size: @h1-font-size-tablet;
+		line-height: @h1-line-height-tablet;
+	}
+	@media (max-width: @md-breakpoint - 1) {
+		font-size: @h1-font-size-mobile;
+		line-height: @h1-line-height-mobile;
+	}
+}
+
+.wp-block-heading h2,
+.wp-block-freeform.block-library-rich-text__tinymce > h2 {
+	font: @h2-font-style @h2-font-variant @h2-font-weight @h2-font-size-desktop~"/"@h2-line-height-desktop @h2-font-family;
+	text-transform: @h2-text-transform;
+	@media (max-width: @lg-breakpoint - 1) {
+		font-size: @h2-font-size-tablet;
+		line-height: @h2-line-height-tablet;
+	}
+	@media (max-width: @md-breakpoint - 1) {
+		font-size: @h2-font-size-mobile;
+		line-height: @h2-line-height-mobile;
+	}
+}
+
+.wp-block-heading h3,
+.wp-block-freeform.block-library-rich-text__tinymce > h3 {
+	font: @h3-font-style @h3-font-variant @h3-font-weight @h3-font-size-desktop~"/"@h3-line-height-desktop @h3-font-family;
+	text-transform: @h3-text-transform;
+	@media (max-width: @lg-breakpoint - 1) {
+		font-size: @h3-font-size-tablet;
+		line-height: @h3-line-height-tablet;
+	}
+	@media (max-width: @md-breakpoint - 1) {
+		font-size: @h3-font-size-mobile;
+		line-height: @h3-line-height-mobile;
+	}
+}
+
+.wp-block-heading h4,
+.wp-block-freeform.block-library-rich-text__tinymce > h4 {
+	font: @h4-font-style @h4-font-variant @h4-font-weight @h4-font-size-desktop~"/"@h4-line-height-desktop @h4-font-family;
+	text-transform: @h4-text-transform;
+	@media (max-width: @lg-breakpoint - 1) {
+		font-size: @h4-font-size-tablet;
+		line-height: @h4-line-height-tablet;
+	}
+	@media (max-width: @md-breakpoint - 1) {
+		font-size: @h4-font-size-mobile;
+		line-height: @h4-line-height-mobile;
+	}
+}
+
+.wp-block-heading h5,
+.wp-block-freeform.block-library-rich-text__tinymce > h5 {
+	font: @h5-font-style @h5-font-variant @h5-font-weight @h5-font-size-desktop~"/"@h5-line-height-desktop @h5-font-family;
+	text-transform: @h5-text-transform;
+	@media (max-width: @lg-breakpoint - 1) {
+		font-size: @h5-font-size-tablet;
+		line-height: @h5-line-height-tablet;
+	}
+	@media (max-width: @md-breakpoint - 1) {
+		font-size: @h5-font-size-mobile;
+		line-height: @h5-line-height-mobile;
+	}
+}
+
+.wp-block-heading h6,
+.wp-block-freeform.block-library-rich-text__tinymce > h6 {
+	font: @h6-font-style @h6-font-variant @h6-font-weight @h6-font-size-desktop~"/"@h6-line-height-desktop @h6-font-family;
+	text-transform: @h6-text-transform;
+	@media (max-width: @lg-breakpoint - 1) {
+		font-size: @h6-font-size-tablet;
+		line-height: @h6-line-height-tablet;
+	}
+	@media (max-width: @md-breakpoint - 1) {
+		font-size: @h6-font-size-mobile;
+		line-height: @h6-line-height-mobile;
+	}
+}
+
+//Button
+.editor-styles-wrapper .wp-block .wp-block-button .wp-block-button__link {
+	font: @dt-btn-m-font-style @dt-btn-m-font-variant @dt-btn-m-font-weight @dt-btn-m-font-size~"/"@dt-btn-m-line-height @dt-btn-m-font-family;
+	text-transform: @dt-btn-m-text-transform;
+	letter-spacing: @dt-btn-m-letter-spacing;
+}
+

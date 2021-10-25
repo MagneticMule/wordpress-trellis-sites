@@ -1,0 +1,35 @@
+/* FILE: custom/__header.scss */
+
+//
+// Site header colors
+//
+
+
+
+
+
+.site-header {
+	background-color: map_get( $customize_options, 'color-header' );
+	color: map_get( $customize_options, 'color-header-text' );
+	background-color: var(--color-header);
+	color: var(--color-header-text);
+}
+
+
+
+.nav-search-form {
+
+	form[role="search"],
+	.form-search,
+	.search-form {
+		background-color: map_get( $customize_options, 'color-accent' );
+		background-color: var(--color-accent);
+		color: #6a6c6e; //*
+	}
+
+	.search-field {
+		background-color: #fff; //*
+		color: #6a6c6e; //*
+	}
+
+}

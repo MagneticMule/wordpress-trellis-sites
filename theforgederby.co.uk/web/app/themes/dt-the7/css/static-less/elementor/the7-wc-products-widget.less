@@ -1,0 +1,257 @@
+@import "parts/filter-decorations-base";
+@import "parts/decorations/pagination";
+
+.elementor-widget.elementor-widget-the7-wc-products,
+.elementor-widget.elementor-widget-the7-wc-products-carousel {
+
+  .onsale {
+    margin: 10px;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  &.onsale-h-position-center .onsale {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &.onsale-v-position-center .onsale {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  // Bootstrap content alignment settings.
+  .woocom-project {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+
+  // Allow product info container expand.
+  .woocom-list-content {
+    width: 100%;
+
+    .woo-buttons i {
+      vertical-align: middle;
+    }
+  }
+
+  .box-button {
+    margin-top: 15px;
+  }
+
+  // Adjust product content spacing in line with the widget settings (margin-top).
+  .product h4,
+  .price,
+  .woocommerce-product-details__short-description,
+  .woo-buttons
+  {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  // Force button text align left.
+  .woo-buttons a {
+    text-align: left;
+    white-space: normal;
+  }
+
+  .product-title {
+    margin: 15px 0 0 0;
+    font-family: var(--the7-woo-title-font-family);
+    font-weight: var(--the7-woo-title-font-weight);
+    font-style: var(--the7-woo-title-font-style);
+    font-size: var(--the7-woo-title-font-size);
+    line-height: var(--the7-woo-title-line-height);
+    text-transform: var(--the7-woo-title-text-transform);
+  }
+
+  .product-title a,
+  .wf-cell .price
+  {
+    transition: all 0.3s;
+  }
+
+  .woocommerce-product-details__short-description {
+    margin-top: 10px;
+  }
+
+  .wf-cell .price {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 0 !important;
+  }
+
+  .wf-cell .price {
+    font-family: var(--the7-woo-content-font-family);
+    font-size: var(--the7-woo-content-font-size-desktop);
+    color: var(--the7-title-color);
+    text-transform: none;
+  }
+
+  .wf-cell .price del,
+  .wf-cell .price del span {
+    color: var(--the7-secondary-text-color);
+    font-family: var(--the7-woo-content-font-family);
+  }
+
+  .star-rating-wrap {
+    margin-top: 5px;
+    line-height: 0;
+  }
+
+  .star-rating {
+    float: none;
+    width: initial;
+    height: initial;
+    display: inline-block;
+    margin: 0 !important;
+
+    // Empty stars.
+    &:before {
+      color: var(--the7-divider-color);
+      float: none;
+      position: initial;
+    }
+    // Filled stars.
+    span:before {
+      color: var(--the7-accent-color);
+    }
+  }
+
+  // Show floating elements and shadow.
+  .woo-buttons-on-img {
+    overflow: visible;
+
+    .filter-popup {
+      padding: 0 10px 0 10px;
+    }
+  }
+
+  // Fix img hover effect.
+  & .wc-img-hover img.back-image {
+    transform: initial;
+  }
+
+  // Fix hover image dimensions for images with custom ratio.
+  &:not(.preserve-img-ratio-y) .wc-img-hover img.back-image {
+    max-width: unset;
+    max-height: unset;
+  }
+
+  &.preserve-img-ratio-y .wc-img-hover img.back-image {
+    transform: translate(-50%,-50%);
+  }
+
+  .woo-buttons-on-img:hover .img-wrap {
+    &:after {
+      opacity: 1;
+    }
+    &:before {
+      opacity: 0;
+    }
+  }
+
+  // Rollover on hover.
+  .img-wrap {
+    // For .wc-img-hover effect
+    position: relative;
+  }
+
+  // Hode overflow since border radius is applied only to this wrapper.
+  .img-border {
+    overflow: hidden;
+    border-color: var(--the7-divider-color);
+    transition: border-color 0.3s;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  --icon-v-offset: 10px;
+  --icon-h-offset: 10px;
+
+  // Icon position.
+  &.icon-position-top .woo-buttons-on-img .woo-buttons {
+    top: var(--icon-v-offset);
+    bottom: unset;
+  }
+
+  &.icon-position-bottom .woo-buttons-on-img .woo-buttons {
+    top: unset;
+    bottom: var(--icon-v-offset);
+  }
+
+  &.icon-position-right .woo-buttons-on-img .woo-buttons {
+    left: unset;
+    right: var(--icon-h-offset);
+  }
+
+  &.icon-position-left .woo-buttons-on-img .woo-buttons {
+    left: var(--icon-h-offset);
+    right: unset;
+  }
+
+  --image-button-background-size: 30px;
+  @image-icon-border-radius: 100px;
+
+  .woo-buttons-on-img .woo-buttons {
+    min-width: var(--image-button-background-size);
+    height: var(--image-button-background-size);
+    border-radius: @image-icon-border-radius; // Default.
+
+    a {
+      background: var(--the7-accent-color);
+      max-width: var(--image-button-background-size);
+      height: var(--image-button-background-size);
+      padding: 0 var(--image-button-background-size) 0 0;
+      border-radius: @image-icon-border-radius; // Default.
+      line-height: 0;
+      white-space: nowrap;
+    }
+
+    i {
+      height: var(--image-button-background-size);
+      width: var(--image-button-background-size);
+      background: var(--the7-accent-color);
+      border-radius: @image-icon-border-radius; // Default.
+      text-align: center;
+      transition: background 0.3s ease-in-out;
+
+      &:before {
+        line-height: var(--image-button-background-size);
+      }
+    }
+
+    &:hover a {
+      .mobile-false & {
+        max-width: 100%;
+
+        .filter-popup {
+          visibility: visible;
+        }
+      }
+    }
+
+    .filter-popup {
+      display: none;
+      vertical-align: middle;
+      line-height: var(--image-button-background-size);
+      visibility: hidden;
+      margin: 0;
+    }
+  }
+
+  &.icon-position-left .woo-buttons-on-img .woo-buttons a {
+    padding: 0 0 0 var(--image-button-background-size);
+  }
+
+  // Move .woo-buttons on top of .onsale (z-index: 101)
+  .woo-buttons {
+    z-index: 102;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  @import "the7-elements-woo-masonry/defaults";
+}

@@ -1,0 +1,124 @@
+@import "inline-mixin";
+@import "icons";
+@import "parts/carousel/arrows";
+
+// DYNAMIC_IMPORT_TOP
+
+.@{unique-shortcode-class-name} {
+  @import "parts/carousel/bullets";
+
+  .owl-nav a:after,
+  .owl-nav a:before {
+    display: none;
+  }
+}
+
+article {
+  .@{unique-shortcode-class-name}.description-on-hover & {
+    overflow: hidden;
+  }
+
+  .@{unique-shortcode-class-name} & {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  }
+
+  .@{unique-shortcode-class-name} & .post-entry-content {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  }
+
+  .@{unique-shortcode-class-name}:not(.mode-masonry) & {
+    &:first-of-type,
+    &.visible.first {
+      margin-top: 0;
+    }
+  }
+}
+
+.@{unique-shortcode-class-name} {
+  margin-left: auto;
+  margin-right: auto;
+
+  &.hover-scale article.post:after {
+    background-color: var(--content-bg-color);
+    box-shadow: none;
+  }
+
+  &.content-bg-on.description-under-image article .post-entry-content {
+    background-color: var(--content-bg-color);
+    box-shadow: none;
+  }
+}
+
+// Arrows.
+.@{unique-shortcode-class-name} {
+  .owl-nav {
+    a, a:hover {
+      color: var(--the7-accent-color);
+    }
+  }
+
+  .owl-carousel-nav-left-position(@arrow-left-v-position, @arrow-left-h-position, @l-arrow-v-position, @l-arrow-h-position);
+  .owl-carousel-nav-right-position(@arrow-right-v-position, @arrow-right-h-position, @r-arrow-v-position, @r-arrow-h-position);
+}
+.@{unique-shortcode-class-name}.carousel-nav-display-never .owl-nav a {
+    display: none;
+  }
+ .@{unique-shortcode-class-name}.carousel-nav-display-hover .owl-nav {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .@{unique-shortcode-class-name}.carousel-nav-display-hover:hover .owl-nav {
+    opacity: 1;
+  }
+
+@media screen and (max-width: @elementor-lg-breakpoint - 1) {
+  .@{unique-shortcode-class-name} {
+    .owl-carousel-nav-left-position(@arrow-left-v-position-tablet, @arrow-left-h-position-tablet, @l-arrow-v-position-tablet, @l-arrow-h-position-tablet);
+    .owl-carousel-nav-right-position(@arrow-right-v-position-tablet, @arrow-right-h-position-tablet, @r-arrow-v-position-tablet, @r-arrow-h-position-tablet);
+  }
+  .@{unique-shortcode-class-name}.carousel-nav-display-tablet-never .owl-nav a {
+    display: none;
+  }
+  .@{unique-shortcode-class-name}.carousel-nav-display-tablet-hover .owl-nav a {
+    display: inline-flex;
+  }
+  .@{unique-shortcode-class-name}.carousel-nav-display-tablet-hover .owl-nav {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .@{unique-shortcode-class-name}.carousel-nav-display-tablet-always .owl-nav a,
+  .@{unique-shortcode-class-name}.carousel-nav-display-tablet-hover .owl-nav a {
+    display: inline-flex;
+  }
+  .@{unique-shortcode-class-name}.carousel-nav-display-tablet-always .owl-nav,
+  .@{unique-shortcode-class-name}.carousel-nav-display-tablet-hover:hover .owl-nav {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: @elementor-md-breakpoint - 1) {
+  .@{unique-shortcode-class-name} {
+    .owl-carousel-nav-left-position(@arrow-left-v-position-mobile, @arrow-left-h-position-mobile, @l-arrow-v-position-mobile, @l-arrow-h-position-mobile);
+    .owl-carousel-nav-right-position(@arrow-right-v-position-mobile, @arrow-right-h-position-mobile, @r-arrow-v-position-mobile, @r-arrow-h-position-mobile);
+  }
+  .@{unique-shortcode-class-name}.carousel-nav-display-mobile-never .owl-nav a {
+    display: none;
+  }
+  .@{unique-shortcode-class-name}.carousel-nav-display-mobile-hover .owl-nav a {
+    display: inline-flex;
+  }
+  .@{unique-shortcode-class-name}.carousel-nav-display-mobile-hover .owl-nav {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .@{unique-shortcode-class-name}.carousel-nav-display-mobile-always .owl-nav a,
+  .@{unique-shortcode-class-name}.carousel-nav-display-mobile-hover .owl-nav a {
+    display: inline-flex;
+  }
+  .@{unique-shortcode-class-name}.carousel-nav-display-mobile-always .owl-nav,
+  .@{unique-shortcode-class-name}.carousel-nav-display-mobile-hover:hover .owl-nav {
+    opacity: 1;
+  }
+}
+
+// DYNAMIC_IMPORT_BOTTOM

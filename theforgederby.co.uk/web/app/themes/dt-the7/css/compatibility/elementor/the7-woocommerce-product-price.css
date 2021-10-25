@@ -1,0 +1,19 @@
+.elementor-widget-the7-woocommerce-product-price .price {
+  display: block;
+  transition: all 300ms ease;
+  margin-bottom: 0;
+  color: var(--the7-base-color);
+  font-family: var(--the7-woo-content-font-family);
+  font-size: var(--the7-h5-font-size-desktop);
+}
+.elementor-widget-the7-woocommerce-product-price .price span,
+.elementor-widget-the7-woocommerce-product-price .price ins,
+.elementor-widget-the7-woocommerce-product-price .price ins span {
+  color: var(--the7-title-color);
+  font-family: var(--the7-woo-content-font-family);
+}
+.elementor-widget-the7-woocommerce-product-price .price del,
+.elementor-widget-the7-woocommerce-product-price .price del span {
+  color: var(--the7-secondary-text-color);
+  font-family: var(--the7-woo-content-font-family);
+}

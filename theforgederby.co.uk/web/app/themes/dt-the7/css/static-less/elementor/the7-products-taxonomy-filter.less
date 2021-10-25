@@ -1,0 +1,66 @@
+@import "parts/decorations/filter";
+
+.elementor-widget.elementor-widget-the7-products-taxonomy-filter {
+  .filter:before,
+  .filter:after {
+    display: none;
+  }
+
+  .filter-decorations.filter-pointer-framed a.filter-item.act:after {
+    background: none;
+  }
+
+  .filter {
+    --filter-title-color-normal: var(--the7-title-color);
+    --filter-title-color-hover: var(--the7-title-color);
+    --filter-title-color-active: var(--the7-title-color);
+    --filter-pointer-border-width: var(--the7-filter-pointer-border-width);
+    --filter-pointer-bg-radius: var(--the7-filter-pointer-bg-radius);
+    --filter-pointer-bg-color-active: var(--the7-accent-color);
+    --filter-pointer-bg-color-hover: var(--the7-accent-color);
+    line-height: 1;
+
+    &.filter-without-decoration {
+      --filter-title-color-hover: var(--the7-accent-color);
+      --filter-title-color-active: var(--the7-accent-color);
+    }
+
+    &.filter-bg-decoration {
+      --filter-title-color-hover: var(--the7-accent-color);
+      --filter-title-color-active: #fff;
+
+      .filter-categories a.act {
+        background: var(--filter-pointer-bg-color-active);
+      }
+    }
+
+    &.filter-underline-decoration {
+      --filter-title-color-hover: var(--the7-title-color);
+      --filter-title-color-active: var(--the7-title-color);
+      --filter-pointer-bg-color-hover: var(--the7-accent-color);
+    }
+
+    .accent-gradient & {
+
+      &.filter-bg-decoration .filter-categories {
+        a:not(.act):hover {
+          --filter-title-color-hover: transparent;
+          background: var(--filter-pointer-bg-color-hover);
+          -webkit-background-clip: text;
+        }
+      }
+
+      &.filter-without-decoration .filter-categories {
+        a:hover {
+          background: var(--filter-pointer-bg-color-hover);
+          -webkit-background-clip: text;
+        }
+
+        a.act {
+          background: var(--filter-pointer-bg-color-active);
+          -webkit-background-clip: text;
+        }
+      }
+    }
+  }
+}

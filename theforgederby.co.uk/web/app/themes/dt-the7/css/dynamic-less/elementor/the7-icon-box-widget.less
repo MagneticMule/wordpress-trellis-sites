@@ -1,0 +1,67 @@
+
+
+@media screen and (max-width: @elementor-lg-breakpoint - 1) {
+  .icon-position-tablet-right .@{unique-shortcode-class-name} .elementor-icon-div {
+    order: 2;
+  }
+  .icon-position-tablet-left .@{unique-shortcode-class-name} .elementor-icon-div,
+  .icon-position-tablet-top .@{unique-shortcode-class-name} .elementor-icon-div {
+    order: 0;
+  }
+  .icon-position-tablet-top .@{unique-shortcode-class-name} .box-content-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .icon-vertical-align-tablet-start.icon-position-tablet-top .@{unique-shortcode-class-name} .box-content-wrapper {
+      justify-content: flex-start;
+  }
+  .icon-vertical-align-tablet-center.icon-position-tablet-top .@{unique-shortcode-class-name} .box-content-wrapper {
+      justify-content: center;
+  }
+  .icon-vertical-align-tablet-end.icon-position-tablet-top .@{unique-shortcode-class-name} .box-content-wrapper {
+      justify-content: flex-end;
+  }
+
+  .icon-position-tablet-left .@{unique-shortcode-class-name} .box-content-wrapper,
+  .icon-position-tablet-right .@{unique-shortcode-class-name} .box-content-wrapper {
+    flex-wrap: inherit;
+  }
+
+  .icon-position-tablet-left .@{unique-shortcode-class-name},
+  .icon-position-tablet-right .@{unique-shortcode-class-name} {
+      flex-wrap: unset;
+  }
+}
+
+@media screen and (max-width: @elementor-md-breakpoint - 1) {
+  .icon-position-mobile-right .@{unique-shortcode-class-name} .elementor-icon-div {
+    order: 2;
+  }
+  .icon-position-mobile-top .@{unique-shortcode-class-name} .box-content-wrapper {
+    flex-wrap: wrap;
+  }
+  .icon-position-mobile-left .@{unique-shortcode-class-name} .elementor-icon-div,
+  .icon-position-mobile-top .@{unique-shortcode-class-name} .elementor-icon-div {
+    order: 0;
+  }
+
+  .icon-vertical-align-mobile-start.icon-position-mobile-top .@{unique-shortcode-class-name} .box-content-wrapper {
+      justify-content: flex-start;
+  }
+  .icon-vertical-align-mobile-center.icon-position-mobile-top .@{unique-shortcode-class-name} .box-content-wrapper {
+      justify-content: center;
+  }
+  .icon-vertical-align-mobile-end.icon-position-mobile-top .@{unique-shortcode-class-name} .box-content-wrapper {
+      justify-content: flex-end;
+  }
+
+  .icon-position-mobile-left .@{unique-shortcode-class-name} .box-content-wrapper,
+  .icon-position-mobile-right .@{unique-shortcode-class-name} .box-content-wrapper {
+    flex-wrap: inherit;
+  }
+
+  .icon-position-mobile-left .@{unique-shortcode-class-name},
+  .icon-position-mobile-right .@{unique-shortcode-class-name} {
+      flex-wrap: unset;
+  }
+}

@@ -1,0 +1,303 @@
+.hide-nav-box() {
+  .the7-nav-product {
+    display: none;
+  }
+  .post-nav .nav-el {
+    max-width: none;
+    flex-grow: 0;
+    flex-basis: initial;
+  }
+}
+
+.popup-middle-outer-position() {
+  .nav-el {
+    position: relative;
+  }
+
+  .post-nav__prev .the7-nav-product {
+    right: auto;
+    left: 100%;
+  }
+
+  .post-nav__next .the7-nav-product {
+    right: 100%;
+    left: auto;
+  }
+}
+
+.popup-middle-outer-outer-position() {
+  .post-nav__prev .the7-nav-product {
+    right: auto;
+    left: 0;
+  }
+
+  .post-nav__next .the7-nav-product {
+    right: 0;
+    left: auto;
+  }
+}
+
+.popup-middle-center-inner-position() {
+  .nav-el {
+    position: relative;
+  }
+
+  .post-nav__prev .the7-nav-product {
+    right: var(--arrow-spacing);
+    left: auto;
+  }
+
+  .post-nav__next .the7-nav-product {
+    right: auto;
+    left: var(--arrow-spacing);
+  }
+}
+
+.popup-middle-center-outer-position() {
+  .post-nav__prev .the7-nav-product {
+    right: 100%;
+    left: auto;
+  }
+
+  .post-nav__next .the7-nav-product {
+    right: auto;
+    left: 100%;
+  }
+}
+
+.popup-middle-right-position() {
+  .nav-el .the7-nav-product {
+    right: 100%;
+    left: auto;
+  }
+}
+
+.popup-middle-right-right-position() {
+  .nav-el .the7-nav-product {
+    right: 0;
+    left: auto;
+  }
+}
+
+.popup-middle-left-position() {
+  .nav-el .the7-nav-product {
+    right: auto;
+    left: 100%;
+  }
+}
+
+.popup-middle-left-left-position() {
+  .nav-el .the7-nav-product {
+    right: auto;
+    left: 0;
+  }
+}
+
+.popup-bottom {
+  .nav-el .the7-nav-product {
+    top: 100%;
+  }
+}
+
+.popup-top {
+  .nav-el .the7-nav-product {
+    bottom: 100%;
+  }
+}
+
+.outer-popup-alignment() {
+  .the7-product-navigation {
+    // Expand this wrap by default. Ensures "outer" align by default.
+    flex-grow: 1;
+  }
+
+  .the7-nav-popup-align-top {
+    .popup-top();
+    .popup-middle-outer-outer-position()
+  }
+  .the7-nav-popup-align-middle {
+    .popup-middle-outer-position();
+  }
+  .the7-nav-popup-align-bottom {
+    .popup-bottom();
+    .popup-middle-outer-outer-position()
+  }
+}
+
+.center-popup-alignment() {
+  .the7-nav-popup-align-top {
+    .popup-top();
+    .popup-middle-center-inner-position();
+  }
+  .the7-nav-popup-align-middle {
+    .popup-middle-center-outer-position();
+  }
+  .the7-nav-popup-align-bottom {
+    .popup-bottom();
+    .popup-middle-center-inner-position();
+  }
+}
+
+.right-popup-alignment() {
+  .the7-nav-popup-align-top {
+    .popup-top();
+    .popup-middle-right-right-position();
+  }
+  .the7-nav-popup-align-middle {
+    .popup-middle-right-position();
+  }
+  .the7-nav-popup-align-bottom {
+    .popup-bottom();
+    .popup-middle-right-right-position();
+  }
+}
+
+.left-popup-alignment() {
+  .the7-nav-popup-align-top {
+    .popup-top();
+    .popup-middle-left-left-position();
+  }
+  .the7-nav-popup-align-middle {
+    .popup-middle-left-position();
+  }
+  .the7-nav-popup-align-bottom {
+    .popup-bottom();
+    .popup-middle-left-left-position();
+  }
+}
+
+.nav--skin-popup {
+  // Outer align.
+  .outer-popup-alignment();
+
+  // Align center.
+  &.nav--align-center {
+    .center-popup-alignment();
+  }
+
+  // Align right.
+  &.nav--align-right {
+    .right-popup-alignment();
+  }
+
+  // Align left.
+  &.nav--align-left {
+    .left-popup-alignment()
+  }
+
+  // Restore .nav-el position to allow boxes aling against the .the7-product-navigation. By design.
+  &.nav--align-right,
+  &.nav--align-left {
+    .the7-navigation-nav.nav-el {
+      position: initial;
+    }
+  }
+
+  // Important to keep this code after .outer-popup-alignment() coz it applies "flex-grow: 1" to all alignments on desktop.
+  &.nav--align-right,
+  &.nav--align-center,
+  &.nav--align-left {
+    .the7-product-navigation {
+      // Shrink down inner wrap to ensure rest of the navigation.
+      flex-grow: 0;
+    }
+  }
+}
+
+// Scoping nav box visibility for desktop.
+@media screen and (min-width: @elementor-lg-breakpoint ) {
+  .elementor-widget-the7-woocommerce-product-navigation:not(.nav--box-y) {
+    .hide-nav-box();
+  }
+}
+
+// Scoping nav box visibility for tablet.
+@media screen and (min-width: @elementor-md-breakpoint) and (max-width: @elementor-lg-breakpoint - 1) {
+  .elementor-widget-the7-woocommerce-product-navigation:not(.nav--box-tablet-y) {
+    .hide-nav-box();
+  }
+}
+
+@media screen and (max-width: @elementor-lg-breakpoint - 1) {
+  .nav--skin-popup {
+    &.nav-tablet--align-right,
+    &.nav-tablet--align-center,
+    &.nav-tablet--align-left {
+      .the7-product-navigation {
+        // Shrink down inner wrap to ensure rest of the navigation.
+        flex-grow: 0;
+      }
+    }
+
+    // Outer align.
+    &.nav-tablet--align-outer {
+      .outer-popup-alignment();
+    }
+
+    // Align center.
+    &.nav-tablet--align-center {
+      .center-popup-alignment();
+    }
+
+    // Align right.
+    &.nav-tablet--align-right {
+      .right-popup-alignment();
+    }
+
+    // Align left.
+    &.nav-tablet--align-left {
+      .left-popup-alignment()
+    }
+
+    &.nav-tablet--align-right,
+    &.nav-tablet--align-left {
+      .the7-navigation-nav.nav-el {
+        position: initial;
+      }
+    }
+  }
+}
+
+@media screen and ( max-width: @elementor-md-breakpoint - 1 ) {
+  .elementor-widget-the7-woocommerce-product-navigation:not(.nav--box-mobile-y) {
+    .hide-nav-box();
+  }
+
+  .nav--skin-popup {
+    &.nav-mobile--align-right,
+    &.nav-mobile--align-center,
+    &.nav-mobile--align-left {
+      .the7-product-navigation {
+        // Shrink down inner wrap to ensure rest of the navigation.
+        flex-grow: 0;
+      }
+    }
+
+    // Outer align.
+    &.nav-mobile--align-outer {
+      .outer-popup-alignment();
+    }
+
+    // Align center.
+    &.nav-mobile--align-center {
+      .center-popup-alignment();
+    }
+
+    // Align right.
+    &.nav-mobile--align-right {
+      .right-popup-alignment();
+    }
+
+    // Align left.
+    &.nav-mobile--align-left {
+      .left-popup-alignment()
+    }
+
+    &.nav-mobile--align-right,
+    &.nav-mobile--align-left {
+      .the7-navigation-nav.nav-el {
+        position: initial;
+      }
+    }
+  }
+}

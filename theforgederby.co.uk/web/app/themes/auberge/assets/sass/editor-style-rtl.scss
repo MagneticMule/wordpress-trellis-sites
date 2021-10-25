@@ -1,0 +1,37 @@
+/* FILE: editor-style-rtl.scss */
+
+//
+// Visual Editor RTL stylesheet
+//
+// @package    Auberge
+// @copyright  WebMan Design, Oliver Juhas
+//
+
+
+
+
+
+// Setup language direction
+
+	$left: right;
+	$right: left;
+
+
+
+
+
+// RTL style overrides
+
+	body {
+		direction: rtl;
+		unicode-bidi: embed;
+	}
+
+	.mce-content-body {
+
+		&::after {
+			left: 0;
+			right: auto;
+		}
+
+	}

@@ -1,0 +1,4 @@
+/* FILE: editor-style-rtl.scss */
+body { direction: rtl; unicode-bidi: embed; }
+
+.mce-content-body::after { left: 0; right: auto; }

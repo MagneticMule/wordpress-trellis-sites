@@ -1,0 +1,29 @@
+/* #List
+================================================== */
+.list-divider li {
+	.transparent-border-mixin;
+}
+
+// .standard-number-list.list-divider.bullet-top li:before,
+// .standard-number-list.list-divider li:first-child:before {
+// 	top:calc(@base-line-height/2px);
+// }
+.standard-arrow.list-divider.bullet-top li:not(:first-child):before,
+.standard-arrow.list-divider.bullet-top li:not(:first-child):after {
+	//top: calc(@base-line-height/2px ~'-' 2px);
+	margin-top: 14px;
+}
+
+.standard-number-list.bullet-top li:before,
+.standard-number-list.bullet-top li:first-child:before {
+	//top:calc(@base-line-height/2px ~'-' 10px);
+}
+.standard-arrow.bullet-top li:before,
+.standard-arrow.bullet-top li:after {
+	//top: calc(@base-line-height/2px ~'-' 6px);
+	margin-top: 5px;
+}
+.standard-number-list li:before,
+.standard-arrow li:before {
+	.accent-bg-mixin;
+}

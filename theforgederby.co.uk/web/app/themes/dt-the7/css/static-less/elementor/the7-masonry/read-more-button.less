@@ -1,0 +1,22 @@
+#page & .post-entry-content .post-details,
+.post-entry-content .post-details {
+  float: none;
+  vertical-align: middle;
+  transition: all 0.3s;
+
+  i {
+    font-size: inherit;
+    line-height: inherit;
+    vertical-align: middle;
+  }
+  &:after {
+  	display: none;
+  }
+}
+.portfolio-shortcode .post-entry-content  .post-details:not(.class-1):not(.class-2) {
+    background: var(--the7-btn-bg-color);
+
+  &:hover {
+    background: var(--the7-btn-hover-bg-color);
+  }
+}

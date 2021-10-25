@@ -1,0 +1,149 @@
+//shortcodes
+
+@import "../shortcodes/tabs.less";
+@import "../shortcodes/accordion.less";
+@import "../shortcodes/pie-chart.less";
+@import "../shortcodes/progress-bar.less";
+
+//VC
+.aio-icon {
+    .accent-icon-bg & {
+        background: @accent-bg-color !important;
+        .accent-gradient & {
+            .background-gradient (@startColor: @accent-bg-color, @endColor: @accent-bg-color-2) !important;
+        }
+    }
+    & > i {
+        .accent-icon-color & {
+            //.paint-accent-color;
+            color: @accent-bg-color !important;
+            .accent-gradient & {
+                .text-gradient-text-fill (@startColor: @accent-bg-color, @endColor: @accent-text-color-2);
+            }
+        }
+    }
+    .accent-border-color & {
+        border-color: @accent-bg-color !important;
+    }
+}
+.uvc-main-heading > *,
+.aio-icon-title {
+    .accent-title-color & {
+        color: @accent-bg-color !important;
+        .accent-gradient & {
+            .text-gradient-text-fill (@startColor: @accent-bg-color, @endColor: @accent-text-color-2);
+        }
+    }
+}
+.uvc-sub-heading,
+.aio-icon-description {
+    .accent-subtitle-color & {
+        color: @accent-bg-color !important;
+        .accent-gradient & {
+            .text-gradient-text-fill (@startColor: @accent-bg-color, @endColor: @accent-text-color-2);
+        }
+    }
+}
+.uvc-main-heading > *,
+.uvc-sub-heading {
+    .accent-subtitle-color &,
+    .accent-title-color & {
+        display: inline-block;
+    }
+}
+.uvc-headings-line {
+    .accent-border-color & {
+        border-color: @accent-bg-color !important;
+        .accent-gradient & {
+            border-color: transparent;
+            -webkit-border-image: -webkit-linear-gradient(@accent-text-color-2);
+            border-image: linear-gradient(@accent-text-color-2);
+            border-image-slice: 1;
+
+        }
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+    }
+}
+.slick-arrow {
+    .accent-arrow-bg & {
+        background: @accent-bg-color !important;
+        .accent-gradient & {
+            .background-gradient (@startColor: @accent-bg-color, @endColor: @accent-bg-color-2) !important;
+        }
+    }
+}
+
+/* #Alert box
+================================================== */
+#main .wpb_alert strong {
+    font: @h5-font-style @h5-font-variant @h5-font-weight @h5-font-size-desktop~"/"@h5-line-height-desktop @h5-font-family;
+    text-transform: @h5-text-transform;
+    @media (max-width: @lg-breakpoint - 1) {
+        font-size: @h5-font-size-tablet;
+        line-height: @h5-line-height-tablet;
+    }
+    @media (max-width: @md-breakpoint - 1) {
+        font-size: @h5-font-size-mobile;
+        line-height: @h5-line-height-mobile;
+    }
+}
+
+// Define default font sizes for UA heding shortcode.
+.uvc-heading.uvc-heading-default-font-sizes .uvc-main-heading {
+    h1 {
+        line-height: @h1-line-height-desktop;
+        @media (max-width: @lg-breakpoint - 1) {
+            line-height: @h1-line-height-tablet;
+        }
+        @media (max-width: @md-breakpoint - 1) {
+            line-height: @h1-line-height-mobile;
+        }
+    }
+    h2 {
+        line-height: @h2-line-height-desktop;
+        @media (max-width: @lg-breakpoint - 1) {
+            line-height: @h2-line-height-tablet;
+        }
+        @media (max-width: @md-breakpoint - 1) {
+            line-height: @h2-line-height-mobile;
+        }
+    }
+    h3 {
+        line-height: @h3-line-height-desktop;
+        @media (max-width: @lg-breakpoint - 1) {
+            line-height: @h3-line-height-tablet;
+        }
+        @media (max-width: @md-breakpoint - 1) {
+            line-height: @h3-line-height-mobile;
+        }
+    }
+    h4 {
+        line-height: @h4-line-height-desktop;
+        @media (max-width: @lg-breakpoint - 1) {
+            line-height: @h4-line-height-tablet;
+        }
+        @media (max-width: @md-breakpoint - 1) {
+            line-height: @h4-line-height-mobile;
+        }
+    }
+    h5 {
+        line-height: @h5-line-height-desktop;
+        @media (max-width: @lg-breakpoint - 1) {
+            line-height: @h5-line-height-tablet;
+        }
+        @media (max-width: @md-breakpoint - 1) {
+            line-height: @h5-line-height-mobile;
+        }
+    }
+    h6 {
+        line-height: @h6-line-height-desktop;
+        @media (max-width: @lg-breakpoint - 1) {
+            line-height: @h6-line-height-tablet;
+        }
+        @media (max-width: @md-breakpoint - 1) {
+            line-height: @h6-line-height-mobile;
+        }
+    }
+}

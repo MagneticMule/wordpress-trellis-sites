@@ -1,0 +1,145 @@
+/* #If not avatare image
+================================================== */
+.no-avatar,
+.testim-no-avatar {
+	border: 1px solid;
+	.transparent-border-mixin;
+}
+.testim-no-avatar svg {
+	fill: @divider-color;
+}
+	.no-avatar,
+	.no-avatar:after,
+	.comment-list .no-avatar:after {
+		color: @divider-color;
+		
+		.sidebar &,
+		.sidebar-content & {
+			color: fade(@widget-sidebar-color, 15%);
+		}
+		.footer & {
+			color:fade(@widget-footer-color, 15%);
+		}
+	}
+
+/* #Scroll to top button
+================================================== */
+.scroll-top {
+	.border-radius;
+}
+
+/* #Contact form
+================================================== */
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="range"],
+input[type="password"],
+select,
+textarea {
+	font: @base-font-style @base-font-variant @base-font-weight @base-font-size~"/"@base-line-height @base-font-family;
+	font-size: @base-font-size;
+}
+.content .wpcf7-select {
+	line-height: calc(@input-height ~'-' 14px);
+	min-width: 200px;
+}
+a.clear-form,
+#cancel-comment-reply-link {
+	.text-small;
+	.color-base-transparent;
+}
+
+/* #Input Select customisation
+================================================== */
+.customSelectInner {
+	@menu-arrow(@base-color-temp);
+}
+
+.customSelect {
+	font: @base-font-style @base-font-variant @base-font-weight @base-font-size~"/"@base-line-height @base-font-family;
+	font-size: @base-font-size;
+	.transparent-bg-mixin;
+}
+/* #Shortcode code
+================================================== */
+.shortcode-code {
+	.bg-mixin;
+}
+.shortcode-code {
+	.solid-bg-mixin;
+	.shadow-decoration;
+	.outline-decoration;
+}
+/* #Standard table
+================================================== */
+.content table,
+.content td,
+.content th {
+	border-color: @divider-color;
+}
+/* #highlighted text
+================================================== */
+.dt-highlight {
+	.accent-bg-mixin;
+}
+/* #Mini blog
+================================================== */
+.post-content .text-secondary {
+	color: fade(@base-color, 50%);
+	.sidebar-content & {
+		color: fade(@widget-sidebar-color, 50%);
+	}
+	.footer & {
+		color: fade(@widget-footer-color, 50%);
+	}
+}
+
+.items-grid .post-content a:hover,
+.post-content a:hover {
+	.color-accent;
+}
+/* #Banner
+================================================== */
+.shortcode-banner-bg > * {
+	line-height: @base-line-height;
+}
+
+/*Layzr bg*/
+.layzr-bg(@color) {
+	background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" stroke="@{color}"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg transform="translate(1 1)" stroke-width="2"%3E%3Ccircle stroke-opacity=".55" cx="18" cy="18" r="18"/%3E%3Cpath d="M36 18c0-9.94-8.06-18-18-18"%3E%3CanimateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"/%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+.layzr-bg {
+	.layzr-bg(fade(@base-color, 25%));
+	.sidebar &,
+	.sidebar-content & {
+		.layzr-bg(fade(@widget-sidebar-color, 25%));
+	}
+	.footer & {
+		.layzr-bg(fade(@widget-footer-color, 25%));
+	}
+}
+.layzr-bg:not(.layzr-bg-transparent) {
+	background-color: fade(@base-color, 5%);
+	.sidebar &,
+	.sidebar-content & {
+		background-color: fade(@widget-sidebar-color, 5%);
+	}
+	.footer & {
+		background-color: fade(@widget-footer-color, 5%);
+	}
+	#page .woocom-project & {
+		background-color: transparent;
+	}
+}
+.pswp button.pswp__button--arrow--left,
+.pswp button.pswp__button--arrow--right,
+.pswp .pswp__button--arrow--left:before,
+.pswp .pswp__button--arrow--right:before {
+	font-size: @lightbox-arrow-size;
+	line-height: @lightbox-arrow-size;
+	min-height: @lightbox-arrow-size;
+}
