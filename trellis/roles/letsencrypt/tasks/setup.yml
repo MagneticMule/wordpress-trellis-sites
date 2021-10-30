@@ -8,7 +8,8 @@
       Please define it in `groups_vars/all/main.yml` with at least one email (as a list/array, *not* a string):
 
         letsencrypt_contact_emails:
-          - magneticmule@gmail.com
+          - changeme
+          - "{{ mail_admin }}" # defined in groups_vars/all/mail.yml
 
       The contact email is used by Let's Encrypt to send expiry notices when a certificate is coming up for renewal.
 
