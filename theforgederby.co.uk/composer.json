@@ -60,6 +60,10 @@
     "roots/wordpress": "5.8",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
+    "wpackagist-plugin/wordpress-seo": "dev-trunk",
+    "wpackagist-plugin/jetpack": "dev-trunk",
+    "wpackagist-plugin/better-wp-security": "dev-trunk",
+    "wpackagist-plugin/auto-terms-of-service-and-privacy-policy": "dev-trunk",
     "hrsetyono/wp-sync-db": "^1.7"
   },
   "require-dev": {
