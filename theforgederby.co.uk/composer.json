@@ -64,6 +64,11 @@
     "wpackagist-plugin/jetpack": "dev-trunk",
     "wpackagist-plugin/better-wp-security": "dev-trunk",
     "wpackagist-plugin/auto-terms-of-service-and-privacy-policy": "dev-trunk",
+    "wpackagist-plugin/webman-amplifier": "dev-trunk",
+    "wpackagist-plugin/advanced-custom-fields": "dev-trunk",
+    "wpackagist-plugin/restaurant-reservations": "dev-trunk",
+    "wpackagist-plugin/ns-featured-posts": "dev-trunk",
+    "wpackagist-plugin/business-profile": "dev-trunk",
     "hrsetyono/wp-sync-db": "^1.7"
   },
   "require-dev": {
