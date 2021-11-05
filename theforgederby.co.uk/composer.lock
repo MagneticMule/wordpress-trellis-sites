@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "382a873c85179a45b2bf322e10389a5b",
+    "content-hash": "93dd702762299cff6b8268de65ec44ce",
     "packages": [
         {
             "name": "composer/installers",
@@ -487,15 +487,15 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "5.8",
+            "version": "5.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "5.8"
+                "reference": "5.8.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/refs/tags/5.8"
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/refs/tags/5.8.1"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -538,7 +538,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-07-20T16:24:55+00:00"
+            "time": "2021-09-09T02:22:02+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
@@ -1040,6 +1040,25 @@
             "time": "2021-10-02T19:24:42+00:00"
         },
         {
+            "name": "wpackagist-plugin/advanced-custom-fields",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.zip?timestamp=1631712346"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/advanced-custom-fields/",
+            "time": "2021-09-15T13:25:46+00:00"
+        },
+        {
             "name": "wpackagist-plugin/auto-terms-of-service-and-privacy-policy",
             "version": "dev-trunk",
             "source": {
@@ -1078,6 +1097,25 @@
             "time": "2021-08-11T20:47:55+00:00"
         },
         {
+            "name": "wpackagist-plugin/business-profile",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/business-profile/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/business-profile.zip?timestamp=1633012128"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/business-profile/",
+            "time": "2021-09-30T14:28:48+00:00"
+        },
+        {
             "name": "wpackagist-plugin/jetpack",
             "version": "dev-trunk",
             "source": {
@@ -1095,6 +1133,63 @@
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/jetpack/",
             "time": "2021-11-02T15:31:43+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/ns-featured-posts",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ns-featured-posts/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ns-featured-posts.zip?timestamp=1626769354"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ns-featured-posts/",
+            "time": "2021-07-20T08:22:34+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/restaurant-reservations",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/restaurant-reservations/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/restaurant-reservations.zip?timestamp=1634681381"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/restaurant-reservations/",
+            "time": "2021-10-19T22:09:41+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/webman-amplifier",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/webman-amplifier/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/webman-amplifier.zip?timestamp=1626168298"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/webman-amplifier/",
+            "time": "2021-07-13T09:24:58+00:00"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
@@ -1586,6 +1681,11 @@
         "wpackagist-plugin/jetpack": 20,
         "wpackagist-plugin/better-wp-security": 20,
         "wpackagist-plugin/auto-terms-of-service-and-privacy-policy": 20,
+        "wpackagist-plugin/webman-amplifier": 20,
+        "wpackagist-plugin/advanced-custom-fields": 20,
+        "wpackagist-plugin/restaurant-reservations": 20,
+        "wpackagist-plugin/ns-featured-posts": 20,
+        "wpackagist-plugin/business-profile": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
