@@ -69,6 +69,7 @@
     "wpackagist-plugin/restaurant-reservations": "dev-trunk",
     "wpackagist-plugin/ns-featured-posts": "dev-trunk",
     "wpackagist-plugin/business-profile": "dev-trunk",
+    "wpackagist-plugin/review-widgets-for-tripadvisor": "dev-trunk",
     "hrsetyono/wp-sync-db": "^1.7"
   },
   "require-dev": {
