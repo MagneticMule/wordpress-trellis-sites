@@ -1,0 +1,26 @@
+#ns_featured_posts_col,
+.column-ns_featured_posts_col {
+    width: 100px;
+    text-align: center !important;
+}
+
+.ns_featured_posts_icon:hover,
+.ns_featured_posts_icon:focus,
+.ns_featured_posts_icon:active {
+	outline: 1px #888 solid;
+	color: #0073aa;
+}
+
+.ns_featured_posts_icon .not-ticked,
+.ns_featured_posts_icon.selected .ticked {
+	display: inline-block;
+}
+
+.ns_featured_posts_icon .ticked,
+.ns_featured_posts_icon.selected .not-ticked {
+	display: none;
+}
+
+.ns_featured_posts_icon .not-ticked {
+	color: #888;
+}
