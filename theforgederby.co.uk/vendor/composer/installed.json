@@ -362,12 +362,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "bad3752fd78f4a07acb24e56fec0366aa711f150"
+                "reference": "a2102bff4c797a8f86e3c39ebc4d0b047e14b06d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/bad3752fd78f4a07acb24e56fec0366aa711f150",
-                "reference": "bad3752fd78f4a07acb24e56fec0366aa711f150",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/a2102bff4c797a8f86e3c39ebc4d0b047e14b06d",
+                "reference": "a2102bff4c797a8f86e3c39ebc4d0b047e14b06d",
                 "shasum": ""
             },
             "conflict": {
@@ -508,7 +508,7 @@
                 "league/commonmark": "<0.18.3",
                 "league/flysystem": "<1.1.4|>=2,<2.1.1",
                 "lexik/jwt-authentication-bundle": "<2.10.7|>=2.11,<2.11.3",
-                "librenms/librenms": "<21.1",
+                "librenms/librenms": "<=21.10.2",
                 "limesurvey/limesurvey": "<3.27.19",
                 "livewire/livewire": ">2.2.4,<2.2.6",
                 "lms/routes": "<2.1.1",
@@ -740,7 +740,7 @@
                 "zfr/zfr-oauth2-server-module": "<0.1.2",
                 "zoujingli/thinkadmin": "<6.0.22"
             },
-            "time": "2021-11-06T03:15:13+00:00",
+            "time": "2021-11-08T18:16:59+00:00",
             "type": "metapackage",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1672,12 +1672,12 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/restaurant-reservations.zip?timestamp=1634681381"
+                "url": "https://downloads.wordpress.org/plugin/restaurant-reservations.zip?timestamp=1636413758"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
             },
-            "time": "2021-10-19T22:09:41+00:00",
+            "time": "2021-11-08T23:22:38+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "homepage": "https://wordpress.org/plugins/restaurant-reservations/",
@@ -1704,6 +1704,28 @@
             "installation-source": "dist",
             "homepage": "https://wordpress.org/plugins/review-widgets-for-tripadvisor/",
             "install-path": "../../web/app/plugins/review-widgets-for-tripadvisor"
+        },
+        {
+            "name": "wpackagist-plugin/smart-slider-3",
+            "version": "dev-trunk",
+            "version_normalized": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/smart-slider-3/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/smart-slider-3.zip?timestamp=1635230226"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "time": "2021-10-26T06:37:06+00:00",
+            "type": "wordpress-plugin",
+            "installation-source": "dist",
+            "homepage": "https://wordpress.org/plugins/smart-slider-3/",
+            "install-path": "../../web/app/plugins/smart-slider-3"
         },
         {
             "name": "wpackagist-plugin/webman-amplifier",

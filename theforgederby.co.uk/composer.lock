@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "40d9be394369cb990036a7cf7f828565",
+    "content-hash": "1ce289aee58e7d3e44aacdb7c6d77d15",
     "packages": [
         {
             "name": "composer/installers",
@@ -1163,14 +1163,14 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/restaurant-reservations.zip?timestamp=1636130011"
+                "url": "https://downloads.wordpress.org/plugin/restaurant-reservations.zip?timestamp=1636413758"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/restaurant-reservations/",
-            "time": "2021-11-05T16:33:31+00:00"
+            "time": "2021-11-08T23:22:38+00:00"
         },
         {
             "name": "wpackagist-plugin/review-widgets-for-tripadvisor",
@@ -1190,6 +1190,25 @@
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/review-widgets-for-tripadvisor/",
             "time": "2021-10-23T09:01:50+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/smart-slider-3",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/smart-slider-3/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/smart-slider-3.zip?timestamp=1635230226"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/smart-slider-3/",
+            "time": "2021-10-26T06:37:06+00:00"
         },
         {
             "name": "wpackagist-plugin/webman-amplifier",
@@ -1220,14 +1239,14 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.zip?timestamp=1636039462"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.zip?timestamp=1636375709"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordpress-seo/",
-            "time": "2021-11-04T15:24:22+00:00"
+            "time": "2021-11-08T12:48:29+00:00"
         }
     ],
     "packages-dev": [
@@ -1237,12 +1256,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "bad3752fd78f4a07acb24e56fec0366aa711f150"
+                "reference": "a2102bff4c797a8f86e3c39ebc4d0b047e14b06d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/bad3752fd78f4a07acb24e56fec0366aa711f150",
-                "reference": "bad3752fd78f4a07acb24e56fec0366aa711f150",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/a2102bff4c797a8f86e3c39ebc4d0b047e14b06d",
+                "reference": "a2102bff4c797a8f86e3c39ebc4d0b047e14b06d",
                 "shasum": ""
             },
             "conflict": {
@@ -1383,7 +1402,7 @@
                 "league/commonmark": "<0.18.3",
                 "league/flysystem": "<1.1.4|>=2,<2.1.1",
                 "lexik/jwt-authentication-bundle": "<2.10.7|>=2.11,<2.11.3",
-                "librenms/librenms": "<21.1",
+                "librenms/librenms": "<=21.10.2",
                 "limesurvey/limesurvey": "<3.27.19",
                 "livewire/livewire": ">2.2.4,<2.2.6",
                 "lms/routes": "<2.1.1",
@@ -1647,7 +1666,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-06T03:15:13+00:00"
+            "time": "2021-11-08T18:16:59+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -1719,6 +1738,7 @@
         "wpackagist-plugin/ns-featured-posts": 20,
         "wpackagist-plugin/business-profile": 20,
         "wpackagist-plugin/review-widgets-for-tripadvisor": 20,
+        "wpackagist-plugin/smart-slider-3": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
