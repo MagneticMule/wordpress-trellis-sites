@@ -17,3 +17,18 @@ wordpress_sites:
       provider: self-signed
     cache:
       enabled: false
+
+  fitnessreoublic.co.uk:
+    site_hosts:
+      - canonical: fitnessrepublic.test
+        redirects:
+          - www.fitnessrepublic.test
+    local_path: ../fitnessrepublic.co.uk # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: skywriter@gmail.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false

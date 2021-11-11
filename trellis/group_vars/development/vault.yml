@@ -7,3 +7,7 @@ vault_wordpress_sites:
     admin_password: q1C0W^q^@W$z&RynKWqLn
     env:
       db_password: zN15$UQodd*k7&KeJWR7z
+  fitnessrepublic.co.uk:
+    admin_password: q1C0W^q^@W$z&RynKWqLn
+    env:
+      db_password: zN15$UQodd*k7&KeJWR7z
