@@ -23,8 +23,6 @@ wordpress_sites:
   staging.fitnessrepublic.co.uk:
     site_hosts:
       - canonical: staging.fitnessrepublic.co.uk
-        redirects:
-          - www.staging.fitnessrepublic.co.uk
     local_path: ../fitnessrepublic.co.uk # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:MagneticMule/wordpress-trellis-sites.git # replace with your Git repo URL
     repo_subtree_path: fitnessrepublic.co.uk # relative path to your Bedrock/WP directory in your repo

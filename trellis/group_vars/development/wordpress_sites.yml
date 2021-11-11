@@ -18,7 +18,7 @@ wordpress_sites:
     cache:
       enabled: false
 
-  fitnessreoublic.co.uk:
+  fitnessrepublic.co.uk:
     site_hosts:
       - canonical: fitnessrepublic.test
         redirects:
