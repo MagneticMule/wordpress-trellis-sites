@@ -21,7 +21,12 @@
   become: yes
   roles:
     - { role: common, tags: [common] }
-    - { role: swapfile, swapfile_size: 1GB, swapfile_file: /swapfile, tags: [swapfile] }
+    - {
+        role: swapfile,
+        swapfile_size: 1GB,
+        swapfile_file: /swapfile,
+        tags: [swapfile],
+      }
     - { role: fail2ban, tags: [fail2ban] }
     - { role: ferm, tags: [ferm] }
     - { role: ntp, tags: [ntp] }
@@ -35,5 +40,5 @@
     - { role: logrotate, tags: [logrotate] }
     - { role: composer, tags: [composer] }
     - { role: wp-cli, tags: [wp-cli] }
-    - { role: letsencrypt, tags: [letsencrypt], when: sites_using_letsencrypt | count }
+    # - { role: letsencrypt, tags: [letsencrypt], when: sites_using_letsencrypt | count }
     - { role: wordpress-setup, tags: [wordpress, wordpress-setup, letsencrypt] }

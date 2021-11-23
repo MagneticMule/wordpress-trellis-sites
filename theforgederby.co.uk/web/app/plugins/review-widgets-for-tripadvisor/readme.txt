@@ -5,7 +5,7 @@ Tags: tripadvisor, reviews, hotels, restaurant, accommodation, bar, reviews, rat
 Requires at least: 3.0.1
 Tested up to: 5.8
 Requires PHP: 5.2
-Stable tag: 7.3
+Stable tag: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Plugin Name: WP Tripadvisor Review Widgets
@@ -14,7 +14,7 @@ Plugin URI: https://wordpress.org/plugins/review-widgets-for-tripadvisor/
 Author: Trustindex.io <support@trustindex.io>
 Author URI: https://www.trustindex.io/
 Text Domain: review-widgets-for-tripadvisor
-Version: 7.3
+Version: 7.4
 
 Embed Tripadvisor reviews fast and easily into your WordPress site. Increase SEO, trust and sales using Tripadvisor reviews.
 
@@ -125,7 +125,7 @@ Why not display your other ratings, too? Check out our other free review plugins
 If your company does business globally, it’s in your interest to cater to various languages.
 
 Our WP Tripadvisor Review Widgets supports the following languages:
-Afrikaans, Albanian, Arabic, Azerbaijani, Bengali, Bulgarian, Chinese, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Korean, Lithuanian, Macedonian, Malay, Norwegian, Polish, Portuguese, Romanian, Russian, Scottish Gaelic, Serbian, Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukranian, Vietnamese
+Afrikaans, Albanian, Arabic, Azerbaijani, Bengali, Bosnian, Bulgarian, Chinese, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Korean, Lithuanian, Macedonian, Malay, Norwegian, Polish, Portuguese, Romanian, Russian, Scottish Gaelic, Serbian, Slovak, Slovenian, Spanish, Swedish, Thai, Turkish, Ukranian, Vietnamese, Welsh
 
 == Support ==
 

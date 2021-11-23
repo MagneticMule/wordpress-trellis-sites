@@ -339,10 +339,7 @@ $style_id = null;
 $scss_set = null;
 $widget_setted_up = null;
 }
-else
-{
 wp_enqueue_style("trustindex-widget-preview-css", "https://cdn.trustindex.io/assets/ti-preview-box.css");
-}
 $example = 'HairPalace';
 $example_url = null;
 switch("tripadvisor")

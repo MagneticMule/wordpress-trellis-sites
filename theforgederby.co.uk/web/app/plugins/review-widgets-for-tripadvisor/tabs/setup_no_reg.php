@@ -104,7 +104,7 @@ value=""
 <?php echo $trustindex_pm_tripadvisor->get_trustindex_widget('4d1942c1993d76d394824aa58'); ?>
 </div>
 </div>
-
+<?php include( plugin_dir_path(__FILE__ ) . "demo_widgets.php" ); ?>
 <?php elseif($current_step == 2 || !$style_id): ?>
 <h1 class="ti-free-title">
 2. <?php echo TrustindexPlugin::___('Select Layout'); ?>

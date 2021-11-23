@@ -25,7 +25,7 @@ exit;
 }
 $yes_icon = '<span class="dashicons dashicons-yes-alt"></span>';
 $no_icon = '<span class="dashicons dashicons-dismiss"></span>';
-$plugin_updated = ($trustindex_pm_tripadvisor->get_plugin_current_version() <= "7.3");
+$plugin_updated = ($trustindex_pm_tripadvisor->get_plugin_current_version() <= "7.4");
 $widget_nonce = get_option($trustindex_pm_tripadvisor->get_option_name('widget-nonce'), 1);
 ?>
 <div class="ti-box">

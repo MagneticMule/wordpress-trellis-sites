@@ -9,7 +9,7 @@ Author: Trustindex.io <support@trustindex.io>
 Author URI: https://www.trustindex.io/
 Contributors: trustindex
 License: GPLv2 or later
-Version: 7.3
+Version: 7.4
 Text Domain: review-widgets-for-tripadvisor
 Domain Path: /languages/
 Donate link: https://www.trustindex.io/prices/
@@ -25,7 +25,7 @@ $plugin_slug = $tmp[ count($tmp) - 2 ];
 if(1)
 {
 require_once plugin_dir_path( __FILE__ ) . 'plugin-load.php';
-$trustindex_pm_tripadvisor = new TrustindexPlugin("tripadvisor", __FILE__, "7.3", "WP Tripadvisor Review Widgets", "Tripadvisor");
+$trustindex_pm_tripadvisor = new TrustindexPlugin("tripadvisor", __FILE__, "7.4", "WP Tripadvisor Review Widgets", "Tripadvisor");
 }
 register_activation_hook(__FILE__, array($trustindex_pm_tripadvisor, 'activate'));
 register_deactivation_hook(__FILE__, array($trustindex_pm_tripadvisor, 'deactivate'));

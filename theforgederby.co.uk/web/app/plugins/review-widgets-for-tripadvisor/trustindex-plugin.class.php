@@ -1,5 +1,5 @@
 <?php
-/* GENERATED: 1634976946 */
+/* GENERATED: 1636535066 */
 class TrustindexPlugin
 {
 private $plugin_file_path;
@@ -373,7 +373,7 @@ $chosed_platform_slug = $this->plugin_slugs[ $force_platform ];
 $current_platform_slug = $this->plugin_slugs[ $this->shortname ];
 $file_path = preg_replace('/\/[^\/]+\/trustindex-plugin\.class\.php/', "/$chosed_platform_slug/trustindex-plugin.class.php", $file_path);
 }
-$chosed_platform = new TrustindexPlugin($force_platform, $file_path, "do-not-care-7.3", "do-not-care-WP Tripadvisor Review Widgets", "do-not-care-Tripadvisor");
+$chosed_platform = new TrustindexPlugin($force_platform, $file_path, "do-not-care-7.4", "do-not-care-WP Tripadvisor Review Widgets", "do-not-care-Tripadvisor");
 if(!$chosed_platform->is_noreg_linked() || !$chosed_platform->is_noreg_table_exists($force_platform))
 {
 return self::get_alertbox(
@@ -736,6 +736,8 @@ public static $widget_languages = [
 'af' => 'Afrikaans',
 'az' => 'Azərbaycan dili',
 'bn' => 'বাংলা',
+'bs' => 'Bosanski',
+'cy' => 'Cymraeg'
 ];
 public static $widget_dateformats = [ 'j. F, Y.', 'F j, Y.', 'Y.m.d.', 'Y-m-d', 'd/m/Y' ];
 private static $widget_rating_texts = array (
@@ -869,11 +871,11 @@ private static $widget_rating_texts = array (
  ),
  'pl' => 
  array (
- 0 => 'Śłaby',
- 1 => 'Poniżej średniego',
- 2 => 'Średni',
- 3 => 'Dobry',
- 4 => 'Doskonały',
+ 0 => 'Słaba',
+ 1 => 'Poniżej średniej',
+ 2 => 'Średnia',
+ 3 => 'Dobra',
+ 4 => 'Doskonała',
  ),
  'pt' => 
  array (
@@ -957,7 +959,7 @@ private static $widget_rating_texts = array (
  ),
  'hr' => 
  array (
- 0 => 'siromašan',
+ 0 => 'slabo',
  1 => 'ispod prosjeka',
  2 => 'prosjed',
  3 => 'dobro',
@@ -1013,11 +1015,11 @@ private static $widget_rating_texts = array (
  ),
  'sr' => 
  array (
- 0 => 'јадан',
- 1 => 'испод просека',
- 2 => 'просек',
+ 0 => 'Слабо',
+ 1 => 'Испод просека',
+ 2 => 'Просек',
  3 => 'Добро',
- 4 => 'одличан',
+ 4 => 'Oдлично',
  ),
  'th' => 
  array (
@@ -1082,6 +1084,22 @@ private static $widget_rating_texts = array (
  2 => 'গড়',
  3 => 'ভাল',
  4 => 'চমৎকার',
+ ),
+ 'bs' => 
+ array (
+ 0 => 'jadan',
+ 1 => 'ispod prosjeka',
+ 2 => 'prosjek',
+ 3 => 'dobro',
+ 4 => 'odličan',
+ ),
+ 'cy' => 
+ array (
+ 0 => 'gwael',
+ 1 => 'islaw\'r cyfartaledd',
+ 2 => 'cyffredin',
+ 3 => 'da',
+ 4 => 'rhagorol',
  ),
 );
 private static $widget_recommendation_texts = array (
@@ -1167,7 +1185,7 @@ private static $widget_recommendation_texts = array (
  ),
  'pl' => 
  array (
- 'negative' => 'NOT_RECOMMEND_ICON nie zaleca',
+ 'negative' => 'NOT_RECOMMEND_ICON nie poleca',
  'positive' => 'RECOMMEND_ICON poleca',
  ),
  'pt' => 
@@ -1300,6 +1318,16 @@ private static $widget_recommendation_texts = array (
  'negative' => 'NOT_RECOMMEND_ICON সুপারিশ করে না',
  'positive' => 'RECOMMEND_ICON সুপারিশ করে',
  ),
+ 'bs' => 
+ array (
+ 'negative' => 'NOT_RECOMMEND_ICON ne preporučuje',
+ 'positive' => 'RECOMMEND_ICON preporučuje',
+ ),
+ 'cy' => 
+ array (
+ 'negative' => 'NOT_RECOMMEND_ICON ddim yn argymell',
+ 'positive' => 'RECOMMEND_ICON yn argymell',
+ ),
 );
 private static $widget_verified_texts = array (
  'en' => 'Verified',
@@ -1345,6 +1373,8 @@ private static $widget_verified_texts = array (
  'af' => 'Geverifieer',
  'az' => 'Doğrulanmışdır',
  'bn' => 'যাচাই',
+ 'bs' => 'Provjereno',
+ 'cy' => 'Wedi\'i ddilysu',
 );
 private static $widget_month_names = array (
  'en' => 
@@ -1863,11 +1893,11 @@ private static $widget_month_names = array (
  1 => 'Фебруар',
  2 => 'Март',
  3 => 'Април',
- 4 => 'мај',
+ 4 => 'Mај',
  5 => 'Јуни',
  6 => 'Јул',
  7 => 'Август',
- 8 => 'септембар',
+ 8 => 'Cептембар',
  9 => 'Октобар',
  10 => 'Новембар',
  11 => 'Децембар',
@@ -1992,6 +2022,36 @@ private static $widget_month_names = array (
  10 => 'নভেম্বর',
  11 => 'ডিসেম্বর',
  ),
+ 'bs' => 
+ array (
+ 0 => 'Januar',
+ 1 => 'Februar',
+ 2 => 'Mart',
+ 3 => 'April',
+ 4 => 'Maj',
+ 5 => 'Jun',
+ 6 => 'Jul',
+ 7 => 'Avgust',
+ 8 => 'Septembar',
+ 9 => 'Oktobar',
+ 10 => 'Novembar',
+ 11 => 'Decembar',
+ ),
+ 'cy' => 
+ array (
+ 0 => 'Ionawr',
+ 1 => 'Chwefror',
+ 2 => 'Mawrth',
+ 3 => 'Ebrill',
+ 4 => 'Mai',
+ 5 => 'Mehefin',
+ 6 => 'Gorffennaf',
+ 7 => 'Awst',
+ 8 => 'Medi',
+ 9 => 'Hydref',
+ 10 => 'Tachwedd',
+ 11 => 'Rhagfyr',
+ ),
 );
 private static $page_urls = array (
  'facebook' => 'https://www.facebook.com/pg/%page_id%',
@@ -2111,16 +2171,29 @@ $no_rating_text = in_array($style_id, [ 15, 19 ]) ? 1 : 0;
 }
 if($default_reviews)
 {
-$page_details['rating_number'] = 9;
+if(!isset($page_details['avatar_url']))
+{
+$page_details['avatar_url'] = 'https://cdn.trustindex.io/companies/default_avatar.jpg';
+}
+$rating_num = 5;
+if(in_array($style_id, [ 16, 31 ]))
+{
+$rating_num = 9;
+}
+else if(in_array(self::$widget_templates[ 'templates' ][ $style_id ]['type'], [ 'sidebar', 'list' ]))
+{
+$rating_num = 3;
+}
+$page_details['rating_number'] = $rating_num;
 if($this->is_ten_scale_rating_platform())
 {
-$page_details['rating_score'] = number_format(rand(10, 100) / 10, 1);
+$page_details['rating_score'] = number_format(rand(80, 100) / 10, 1);
 }
 else
 {
-$page_details['rating_score'] = rand(1, 5);
+$page_details['rating_score'] = rand(4, 5);
 }
-$reviews = $this->getRandomReviews();
+$reviews = $this->getRandomReviews($rating_num);
 }
 else
 {
@@ -2566,17 +2639,30 @@ $text .= '<span class="ti-star e"></span>';
 }
 return $text;
 }
-private function getRandomReviews()
+private function getRandomReviews($count = 9)
 {
+$random_texts = [
+'Works very well, does the job, very easy to set up.',
+'O plugin excede expectativas! Com ele, é possível acrescentar as avaliações do Google ao site com um design altamente customizável e configuração em poucos cliques.',
+'<strong>I have been using this firm for many...</strong><br />I have been using this firm for many years now for my office supplies and I find them excellent. Deliveries 99% next day. Stock excellent. Problem solving excellent. Prices excellent. Keep up the good service',
+'Very good! We ordered the breaded mushrooms as a appetizer, wish I had some now!<br /><br />I ordered the slow cooked beef and Guinness stew form dinner and my boyfriend got the bangers and mash, both were delicious! And it was so nice to have a hearty warm meal with it being chilly outside.<br /><br />Would definitely recommend to friends and family visiting and I would come back myself as well',
+'Was so impressed with the facilities. Everything very seamlessly integrated, no snags in decor etc. Loved the ambient lighting - everything was on a dimmer! Bed was very comfy, and bathroom beautifully presented! Staff were more than helpful, with the hotel boasting an extremely up-market feel for the price! Highly recommended',
+'Smooth online transaction. very professional and reputable with solid communication',
+'Good selection. Reasonable prices. Easy to use website. Prompt delivery.',
+'Wonderful products, great service.',
+'As always very pleased with the service and the packaging! I have yet to try all the different aromas but I’m sure they will be good as usual.'
+];
 $reviews = [];
-for($i = 0; $i < 9; $i++)
+for($i = 0; $i < $count; $i++)
 {
+shuffle($random_texts);
+$text = array_pop($random_texts);
 $r = new stdClass();
 $r->id = $i;
-$r->user = self::___('Reviewer');
+$r->user = self::___('Reviewer') .' '. ($i + 1);
 $r->user_photo = 'https://cdn.trustindex.io/assets/default-avatar/noprofile-01.svg';
-$r->text = self::___('This is an example review about your business (to demonstrate the widgets...)');
-$r->original_rating = rand(1, 5);
+$r->text = '<p style="font-size:11px;font-style:italic;opacity:0.8;margin:0;margin-bottom:4px">'. self::___('Example review to demonstrate the widgets...') .'</p>'. $text;
+$r->original_rating = rand(4, 5);
 $r->rating = $r->original_rating;
 $r->highlight = null;
 $r->date = date('Y-m-d');
