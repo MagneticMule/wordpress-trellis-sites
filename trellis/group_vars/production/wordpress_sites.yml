@@ -51,3 +51,20 @@ wordpress_sites:
       provider: letsencrypt
     cache:
       enabled: true
+
+  seventhstage.uk:
+    site_hosts:
+      - canonical: seventhstage.uk
+        redirects:
+          - www.seventhstage.uk
+    local_path: ../seventhstage.uk # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:MagneticMule/wordpress-trellis-sites.git # replace with your Git repo URL
+    repo_subtree_path: seventhstage.uk # relative path to your Bedrock/WP directory in your repo
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: true
