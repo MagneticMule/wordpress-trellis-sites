@@ -22,7 +22,9 @@ wordpress_sites:
 
   fitnessrepublic.co.uk:
     site_hosts:
-      - canonical: 206.189.28.67
+      - canonical: fitnessrepublic.co.uk
+        redirects:
+          - www.fitnessrepublic.co.uk
     local_path: ../fitnessrepublic.co.uk # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:MagneticMule/wordpress-trellis-sites.git # replace with your Git repo URL
     repo_subtree_path: fitnessrepublic.co.uk # relative path to your Bedrock/WP directory in your repo
@@ -30,7 +32,7 @@ wordpress_sites:
     multisite:
       enabled: false
     ssl:
-      enabled: false
+      enabled: true
       provider: letsencrypt
     cache:
       enabled: true
@@ -47,7 +49,7 @@ wordpress_sites:
     multisite:
       enabled: false
     ssl:
-      enabled: false
+      enabled: true
       provider: letsencrypt
     cache:
       enabled: true
