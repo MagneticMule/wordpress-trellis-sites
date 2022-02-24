@@ -11,7 +11,7 @@
     path: "{{ www_root }}"
     owner: "{{ web_user }}"
     group: "{{ web_group }}"
-    mode: '0755'
+    mode: "0755"
     state: directory
 
 - name: Create logs folder of sites
@@ -19,7 +19,7 @@
     path: "{{ www_root }}/{{ item.key }}/logs"
     owner: "{{ web_user }}"
     group: "{{ web_group }}"
-    mode: '0755'
+    mode: "0755"
     state: directory
   with_dict: "{{ wordpress_sites }}"
 
@@ -27,7 +27,7 @@
   template:
     src: php-fpm.conf.j2
     dest: /etc/php/{{ php_version }}/fpm/pool.d/wordpress.conf
-    mode: '0644'
+    mode: "0644"
   notify: reload php-fpm
 
 - name: Disable default PHP-FPM pool
@@ -46,7 +46,7 @@
 - name: Setup WP system cron
   cron:
     name: "{{ item.key }} WordPress cron"
-    minute: "{{ item.value.cron_interval | default('*/15') }}"
+    minute: "{{ item.value.cron_interval | default('*/1') }}"
     user: "{{ web_user }}"
     job: "cd {{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }} && wp cron event run --due-now > /dev/null 2>&1"
     cron_file: "wordpress-{{ item.key | replace('.', '_') }}"
