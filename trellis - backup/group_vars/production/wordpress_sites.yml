@@ -1,0 +1,89 @@
+# Documentation: https://roots.io/trellis/docs/remote-server-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/production/vault.yml
+
+wordpress_sites:
+  theforgederby.co.uk:
+    site_hosts:
+      - canonical: theforgederby.co.uk
+        redirects:
+          - www.theforgederby.co.uk
+    local_path: ../theforgederby.co.uk # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:MagneticMule/wordpress-trellis-sites.git # replace with your Git repo URL
+    repo_subtree_path: theforgederby.co.uk # relative path to your Bedrock/WP directory in your repo
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: true
+
+  fitnessrepublic.co.uk:
+    site_hosts:
+      - canonical: fitnessrepublic.co.uk
+        redirects:
+          - www.fitnessrepublic.co.uk
+    local_path: ../fitnessrepublic.co.uk # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:MagneticMule/wordpress-trellis-sites.git # replace with your Git repo URL
+    repo_subtree_path: fitnessrepublic.co.uk # relative path to your Bedrock/WP directory in your repo
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: true
+
+  hiddenburton.uk:
+    site_hosts:
+      - canonical: hiddenburton.uk
+        redirects:
+          - www.hiddenburton.uk
+    local_path: ../hiddenburton.uk # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:MagneticMule/wordpress-trellis-sites.git # replace with your Git repo URL
+    repo_subtree_path: hiddenburton.uk # relative path to your Bedrock/WP directory in your repo
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: true
+
+  seventhstage.uk:
+    site_hosts:
+      - canonical: seventhstage.uk
+        redirects:
+          - www.seventhstage.uk
+    local_path: ../seventhstage.uk # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:MagneticMule/wordpress-trellis-sites.git # replace with your Git repo URL
+    repo_subtree_path: seventhstage.uk # relative path to your Bedrock/WP directory in your repo
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: true
+
+  theacademyofrock.co.uk:
+    site_hosts:
+      - canonical: theacademyofrock.co.uk
+        redirects:
+          - www.theacademyofrock.co.uk
+    local_path: ../theacademyofrock.co.uk # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:MagneticMule/wordpress-trellis-sites.git # replace with your Git repo URL
+    repo_subtree_path: theacademyofrock.co.uk # relative path to your Bedrock/WP directory in your repo
+    branch: master
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: letsencrypt
+    cache:
+      enabled: true

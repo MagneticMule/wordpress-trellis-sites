@@ -1,0 +1,21 @@
+# Created by trellis-cli v1.6.1
+# Documentation: https://docs.roots.io/trellis/master/vault/
+
+vault_mysql_root_password: L5x6bAu3Gilgc8XDgLAoQi11DtBrQeQr54dMnqUUKmq9ohKQVeoUriNE9TKmnYCw
+vault_users:
+- name: '{{ admin_user }}'
+  password: J1LB2QANFYBoROJL3Be4u0M9ThmM5Gnyupduoj4CQJ6KIdu4jFB1l5Ap2voW4y9v
+  salt: MU6fbzylesABpwe4jciNwJbvQhHuv4HljEzjsPl1blFlamYcCuY8hJJQERvZ1mB6
+vault_wordpress_sites:
+  whitelightphotography.co.uk:
+    admin_password: Bn8TYaAZOYoc5C77iskc5gQAqh3GDR7WsqF3Hz9z64GdA1tRgFYn2HwRMa9mLcHk
+    env:
+      db_password: F91L7touv34X7SOnx86ftMFXCtSd5WadWThO4bRhYiMAcizESFuHi0Fk6td57koR
+      auth_key: WeqW0HacJbjK9wWhwkpaKHdrnwi3bFEJqCtAP7I6QpkVCvbIdNsCiJW3j67J4Hrq
+      secure_auth_key: L11irMOuWMBzEIQKzohd7zcyzTvy99W0Cfu5hpuAejhzNtod6mrFmS1ZSFTj6GW1
+      logged_in_key: AFvCRFDVg9deXqonF4mTiC63FsyXd2TARMEnh3gS4DHL4QdbjeoOzocGfacSh5dC
+      nonce_key: fhslCdhgKepGc66GnHuAmkFYrUglZgjJoQnkpfAKE0lcvgnArWhT3WV0SBgsMTGP
+      auth_salt: vdBjD9WoKE7gKhWEP354wBrfs7xvmtfVjSQhjwtbCHAceK3Mqv3pUsq8JLh7BsHF
+      secure_auth_salt: lbHP0bLm42n4UYwqHp2S0538UAwHdiy9q6aFvnfpeXYjTHaBR8yhY0KR7Dw1oqUa
+      logged_in_salt: xwbasfReG7y3r3Nne6SEFtpZHkrmmFDlsniR14lq33aFK7vg6QAsd4FFlmJkXmUL
+      nonce_salt: vngEXIjR3tTlLIBGRN2y1Nx4BJBccnfAcJOsvPThRf5TX5aexb82wi6VJS8EEBkx

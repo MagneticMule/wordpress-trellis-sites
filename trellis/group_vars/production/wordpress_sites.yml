@@ -71,14 +71,14 @@ wordpress_sites:
     cache:
       enabled: true
 
-  theacademyofrock.co.uk:
+  whitelightphotography.co.uk:
     site_hosts:
-      - canonical: theacademyofrock.co.uk
+      - canonical: whitelightphotography.co.uk
         redirects:
-          - www.theacademyofrock.co.uk
-    local_path: ../theacademyofrock.co.uk # path targeting local Bedrock site directory (relative to Ansible root)
+          - www.whitelightphotography.co.uk
+    local_path: ../whitelightphotography.co.uk # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:MagneticMule/wordpress-trellis-sites.git # replace with your Git repo URL
-    repo_subtree_path: theacademyofrock.co.uk # relative path to your Bedrock/WP directory in your repo
+    repo_subtree_path: whitelightphotography.co.uk # relative path to your Bedrock/WP directory in your repo
     branch: master
     multisite:
       enabled: false

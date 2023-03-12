@@ -1,0 +1,18 @@
+# Created by trellis-cli v1.6.1
+# Documentation: https://docs.roots.io/trellis/master/wordpress-sites/
+
+wordpress_sites:
+  whitelightphotography.co.uk:
+    site_hosts:
+    - canonical: whitelightphotography.test
+      redirects:
+      - www.whitelightphotography.test
+    local_path: ../site
+    admin_email: admin@whitelightphotography.test
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false
